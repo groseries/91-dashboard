@@ -12,6 +12,7 @@ def get_sunrise_sunset(lat, lng):
 
     response = requests.get(base_url, params=params)
     data = response.json()
+    
 
     if response.status_code == 200:
         sunrise_cst = data['results']['sunrise']
