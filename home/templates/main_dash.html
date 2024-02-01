@@ -4,6 +4,7 @@
 {% block content %}
 
 <div class="row">
+    {{notams}}
     {{ezsked}}
     {{weather}}
     TIME CARD ({% now "H:i:s" %})
@@ -12,32 +13,14 @@
       {% comment %} {% now "H:i:s" %} {% endcomment %}
     </div>
     
-    use this same script to update the weather every 5 minutes
-    <script>
-    function updateClock() {
-      var clockElement = document.getElementById('clock');
-      var currentTime = new Date().toLocaleTimeString();
-      clockElement.innerHTML = currentTime;
-    }
-    // Update the clock every second (1000 milliseconds)
-    setInterval(updateClock, 1000);
-    </script>
+    
 
     <div id="utcClock">
       <!-- Initial time will be replaced by JavaScript -->
       {% now "H:i:s" %}
     </div>
     
-    <script>
-    function updateUTCClock() {
-      var utcClockElement = document.getElementById('utcClock');
-      var currentUTCTime = new Date().toUTCString().split(' ')[4]; // Extracting only the time part
-      utcClockElement.innerHTML = currentUTCTime;
-    }
-    
-    // Update the UTC clock every second (1000 milliseconds)
-    setInterval(updateUTCClock, 1000);
-    </script>
+  
 
     {{sunrise_set}} 
 {% include 'time_card.html' %}
@@ -45,7 +28,9 @@
 {% include 'time_card.html' %}
 
 </div>
-
+<div id="result-container">
+  <!-- Display the received data here -->
+</div>
 <div>
   {{metar}}
   {{ taf }}
@@ -59,4 +44,26 @@
 </div>
 
 <div>AHAS NOTAMS TFRs</div>
+use this same script to update the weather every 5 minutes
+    <script>
+    function updateClock() {
+      var clockElement = document.getElementById('clock');
+      var currentTime = new Date().toLocaleTimeString();
+      clockElement.innerHTML = currentTime;
+    }
+    // Update the clock every second (1000 milliseconds)
+    setInterval(updateClock, 1000);
+    </script>
+
+    <script>
+      function updateUTCClock() {
+        var utcClockElement = document.getElementById('utcClock');
+        var currentUTCTime = new Date().toUTCString().split(' ')[4]; // Extracting only the time part
+        utcClockElement.innerHTML = currentUTCTime;
+      }
+      
+      // Update the UTC clock every second (1000 milliseconds)
+      setInterval(updateUTCClock, 1000);
+      </script>
+
 {% endblock content%}

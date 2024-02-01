@@ -1,6 +1,8 @@
 import requests
 import json
 from datetime import datetime, timedelta
+from tfr_scraper import tfr_scraper
+from .fetchNotams import *
 
 def get_sunrise_sunset(lat, lng):
     base_url = "https://api.sunrisesunset.io/json"
@@ -12,7 +14,7 @@ def get_sunrise_sunset(lat, lng):
 
     response = requests.get(base_url, params=params)
     data = response.json()
-    
+
 
     if response.status_code == 200:
         sunrise_cst = data['results']['sunrise']
@@ -77,6 +79,17 @@ def get_taf_data(airport, date_zulu_time):
         print(f"Request failed with status code: {response.status_code}")
         print(response.text)
         return None
+
+def get_notam_data(airports):
+    data = fetch_notams_by_icao("KMEI")
+    return data
+
+def get_tfr_data():
+    data = tfr_scraper.get_list_and_parse_all()
+    return data
+
+    #Downloads TFR list and parses all combines details with list and returns it. 
+
 
 def post_ahas_form(airport, date, time):
     # THIS IS GOING TO BE SOMEWHAT HARD- GOING TO NEED BS

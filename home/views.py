@@ -37,6 +37,9 @@ class MainDash(View):
         navy_mccain_lng = -88.55
         context['sunrise_set'] = get_sunrise_sunset(navy_mccain_lat, navy_mccain_lng)
         context['ahas'] = post_ahas_form("knmm",today_date,zulu_time)
+
+        context['notams'] = get_notam_data(["KMEI"])
+        
         return context
 
     def get(self, request, *args, **kwargs):
