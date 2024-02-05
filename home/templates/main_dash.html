@@ -2,30 +2,23 @@
 {% load static %}
 
 {% block content %}
-
+<div class="container">
 <div class="row">
-    {{notams}}
-    {{ezsked}}
-    {{weather}}
-    TIME CARD ({% now "H:i:s" %})
-    <div id="clock">
-      <!-- Initial time will be replaced by JavaScript -->
-      {% comment %} {% now "H:i:s" %} {% endcomment %}
-    </div>
-    
-    
+  <div class="col-12 col-sm-6 col-xl-4 mb-4">
+  {% include 'time_card_local.html' %}
+  </div>
+  <div class="col-12 col-sm-6 col-xl-4 mb-4">
+  {% include 'time_card_utc.html' %}
+  </div>
+  <div class="col-12 col-sm-6 col-xl-4 mb-4">
+  {% include 'time_card_sunset.html' with suntimes=sunrise_set %}
+  </div>
 
-    <div id="utcClock">
-      <!-- Initial time will be replaced by JavaScript -->
-      {% now "H:i:s" %}
-    </div>
-    
-  
+</div>
+</div>
 
-    {{sunrise_set}} 
-{% include 'time_card.html' %}
-{% include 'time_card.html' %}
-{% include 'time_card.html' %}
+
+{% comment %} {% include 'time_card.html' %} {% endcomment %}
 
 </div>
 <div id="result-container">

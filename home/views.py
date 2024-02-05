@@ -30,15 +30,15 @@ class MainDash(View):
         context = {}
         # course_id =kwargs["course_id"]
         context['utc'] = zulu_time
-        context['ezsked'] = get_ez_sked_data("Roser","Capt", today_date)
+        # context['ezsked'] = get_ez_sked_data("Roser","Capt", today_date)
         context['metar'] = get_metar_data("KNMM", today_date_time_zulu)
-        context['taf'] = get_taf_data("KNMM", today_date_time_zulu)
+        # context['taf'] = get_taf_data("KNMM", today_date_time_zulu)
         navy_mccain_lat = 32.55
         navy_mccain_lng = -88.55
         context['sunrise_set'] = get_sunrise_sunset(navy_mccain_lat, navy_mccain_lng)
-        context['ahas'] = post_ahas_form("knmm",today_date,zulu_time)
+        # context['ahas'] = post_ahas_form("knmm",today_date,zulu_time)
 
-        context['notams'] = get_notam_data(["KMEI"])
+        # context['notams'] = get_notam_data(["KMEI"])
         
         return context
 
