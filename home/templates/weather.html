@@ -2,42 +2,47 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
-<div class="row">
-  <div class="col-12 col-sm-6 col-xl-4 mb-4">
-  {% include 'time_card_local.html' %}
+<div class="container m-4" >
+  <div class="row">
+    <div class="col-4 d-flex align-items-stretch">
+      {% include 'time_card_local.html' %}
+    </div>
+    <div class="col-4 d-flex align-items-stretch">
+      {% include 'time_card_utc.html' %}
+    </div>
+    <div class="col-4 d-flex align-items-stretch">
+      {% include 'time_card_sunset.html' with suntimes=sunrise_set %}
+    </div>
   </div>
-  <div class="col-12 col-sm-6 col-xl-4 mb-4">
-  {% include 'time_card_utc.html' %}
-  </div>
-  <div class="col-12 col-sm-6 col-xl-4 mb-4">
-  {% include 'time_card_sunset.html' with suntimes=sunrise_set %}
-  </div>
+</div>
 
+
+<div>
+{% include 'metar_card.html' with data=metar%}
 </div>
+
+
+<div class="mt-4">
+{% include 'taf_card.html' with data=taf%}
 </div>
+
+{{ notams }}
+</div>
+
 
 
 {% comment %} {% include 'time_card.html' %} {% endcomment %}
 
-</div>
+{% comment %} </div>
 <div id="result-container">
   <!-- Display the received data here -->
 </div>
-<div>
-  {{metar}}
-  {{ taf }}
-  METARS
-  Airport
-  Clouds
-  Viz
-  Winds
-  button to take you to awc page
-  {% include 'weather_card.html' %}
-</div>
+<div> {% endcomment %}
 
-<div>AHAS NOTAMS TFRs</div>
-use this same script to update the weather every 5 minutes
+{% comment %} </div> {% endcomment %}
+
+<div></div>
+{% comment %} use this same script to update the weather every 5 minutes {% endcomment %}
     <script>
     function updateClock() {
       var clockElement = document.getElementById('clock');

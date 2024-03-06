@@ -1,5 +1,31 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'schedule_card.html' with data=sna_today_data %}
+
+Add tomorrows schedule
+Change schedule to be blocks on a calendar
+
 Top is a chart of who is scheduled when
 -group by person not time
 Every person gets their own card at bottom of page with stats (tbd)
 track their individual metrics ()
 performance data for everyone's takeoff time
+
+early bird award
+night owl
+no rest for the weary - most weekend/friday events
+most unique events (head of the pack)
+most repeat events (most times scheduled for same event)
+individal cards:
+unofficial onwings - everyones most flown with instructor
+duties
+early starts
+unique events
+most recent event
+total repeated events
+
+
+{% endblock content%}

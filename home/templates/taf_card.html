@@ -1,0 +1,86 @@
+{% load custom_filters %}
+
+<div class="card border-0 shadow">
+    <div class="card-header">
+      <div class="row align-items-center">
+        <div class="col">
+          <h2 class="fs-5 fw-bold mb-0">TAF</h2>
+        </div>
+        <div class="col text-end">
+          <a href="https://aviationweather.gov" class="btn btn-sm btn-primary">FWB</a>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+          <tr>
+            <th class="border-bottom" scope="col">Raw</th>
+            <th class="border-bottom" scope="col">ICAO</th>
+            <th class="border-bottom" scope="col">Issue Time</th>
+            <th class="border-bottom" scope="col">Forecast Time</th>
+            <th class="border-bottom" scope="col">Wind</th>
+            <th class="border-bottom" scope="col">Viz</th>
+            <th class="border-bottom" scope="col">Precipitation</th>
+            <th class="border-bottom" scope="col">Clouds</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {% for airport in taf %}
+          <tr>
+            <th class="text-gray-900" scope="row" {% if airport.fcsts|length > 0 %} rowspan="{{ airport.fcsts|length }}" {% endif %}>
+              <button type="button" class="btn btn-secondary" data-bs-toggle="popover" title="Raw METAR" data-bs-content="{{ airport.rawTAF }}">
+                Raw
+              </button>
+            </th>
+            <th class="text-gray-900" scope="row" {% if airport.fcsts|length > 0 %} rowspan="{{ airport.fcsts|length }}" {% endif %}>
+              {{ airport.icaoId }}
+            </th>
+            <th class="text-gray-900" scope="row" {% if airport.fcsts|length > 0 %} rowspan="{{ airport.fcsts|length }}" {% endif %}>
+              {{ airport.issueTime }}
+            </th>
+            {% if airport.fcsts|length > 0 %}
+              {% for forecast in airport.fcsts %}
+              <td class="fw-bolder text-gray-500">
+                {% if forecast.timeBec %}
+                {{forecast.fcstChange}} {{ forecast.timeBec|unix_timestamp_to_datetime }} to {{ forecast.timeTo|unix_timestamp_to_datetime }}
+                {% elif forecast.fcstChange is None%}
+                {{ forecast.timeFrom|unix_timestamp_to_datetime }} to {{ forecast.timeTo|unix_timestamp_to_datetime }}
+                {% else %}
+                {{forecast.fcstChange}}{{ forecast.timeFrom|unix_timestamp_to_datetime }} to {{ forecast.timeTo|unix_timestamp_to_datetime }}
+                {% endif %}
+              </td>
+                <td class="fw-bolder text-gray-500">
+                  {{ forecast.wdir }} at {{ forecast.wspd }} kts
+                </td>
+                <td class="fw-bolder text-gray-500">
+                  {{ forecast.visib }}
+                </td>
+                <td class="fw-bolder text-gray-500">
+                  {{ forecast.wxString }}
+                </td>
+                <td class="fw-bolder text-gray-500">
+                  <ul>
+                    {% for cloud in forecast.clouds %}
+                      <li>{{ cloud.cover }} at {{ cloud.base }} ft</li>
+                    {% endfor %}
+                  </ul>
+                </td>
+                </tr>
+                {% if not loop.last %}
+                  <tr>
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              <td class="fw-bolder text-gray-500" colspan="4">No forecast data available</td>
+              </tr>
+            {% endif %}
+          </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

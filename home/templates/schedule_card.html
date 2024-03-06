@@ -1,0 +1,78 @@
+{% load custom_filters %}
+
+<div class="card border-0 shadow">
+    <div class="card-header">
+      <div class="row align-items-center">
+        <div class="col">
+          <h2 class="fs-5 fw-bold mb-0">Class Schedule {% now "jS F Y" %}</h2>
+        </div>
+        <div class="col text-end">
+            <a href="{% url 'schedule' %}" class="btn btn-sm btn-primary">Schedule</a>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+          <tr>
+            <th class="border-bottom" scope="col">SNA</th>
+            <th class="border-bottom" scope="col">Event</th>
+            <th class="border-bottom" scope="col">IP</th>
+            <th class="border-bottom" scope="col">Brief Time</th>
+            <th class="border-bottom" scope="col">Launch</th>
+            <th class="border-bottom" scope="col">Land</th>
+            <th class="border-bottom" scope="col">Remarks</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+
+          {% for stud, events in data.items %}
+          <tr>
+            
+            <th class="text-gray-900" scope="row" {% if events|length > 0 %} rowspan="{{ events|length }}" {% endif %}>
+                {{ stud }}
+            </th>
+            
+            {% if events|length > 0 %}
+            {% for line_data in events %}
+              <td class="fw-bolder text-gray-500">
+                  {{ line_data.event }}
+              </td>
+              <td class="fw-bolder text-gray-500">
+                  {{ line_data.crew_1 }}
+              </td>
+              <td class="fw-bolder text-gray-500">
+                  {{ line_data.brief_time }}
+              </td>
+              <td class="fw-bolder text-gray-500">
+                  {{ line_data.takeoff_time }}
+              </td>
+              <td class="fw-bolder text-gray-500">
+                  {{ line_data.land_time }}
+              </td>
+              <td class="fw-bolder text-gray-500">
+                {% if forecast.remark is not None %}
+                    {{ line_data.remark }}
+                    {% endif %}
+                </td>
+              </tr>
+              {% if not loop.last %}
+              <tr>
+            {% endif %}
+          {% endfor %}
+          {% else %}
+            <td class="fw-bolder text-gray-500" colspan="4">No schedule data available for {{ stud }}</td>
+            </tr>
+          {% endif %}
+          </tr>
+    {% endfor %}
+
+
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

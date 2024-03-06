@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% comment %} <a href="https://www.cnatra.navy.mil/scheds/tw1/SQ-VT-9/!{% now 'Y-m-d' %}!VT-9!Frontpage.pdf" class="nav-link">link</a> {% endcomment %}
+<object class="mt-4" data="https://www.cnatra.navy.mil/scheds/tw1/SQ-VT-9/!{% now 'Y-m-d' %}!VT-9!Frontpage.pdf" type="application/pdf" width="100%" height="700px">
+    <p>It appears you don't have a PDF plugin for this browser. You can <a href="https://www.cnatra.navy.mil/scheds/tw1/SQ-VT-9/{% now 'Y-m-d' %}/VT-9/Frontpage.pdf">click here to download the PDF file.</a></p>
+</object>
+
+{% endblock content%}

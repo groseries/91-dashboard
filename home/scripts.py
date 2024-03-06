@@ -56,9 +56,9 @@ def get_metar_data(airport, date_zulu_time):
         "date":date_zulu_time,
     }
     response = requests.get(url,params=params)
-    if response.status_code == 200:
+    if response.status_code == 200 and len(response.json())>0:
         data = response.json()
-        return data
+        return data[0]
     else:
         print(f"Request failed with status code: {response.status_code}")
         print(response.text)
@@ -72,9 +72,9 @@ def get_taf_data(airport, date_zulu_time):
             "date":date_zulu_time,
         }
     response = requests.get(url,params=params)
-    if response.status_code == 200:
+    if response.status_code == 200 and len(response.json())>0:
         data = response.json()
-        return data
+        return data[0]
     else:
         print(f"Request failed with status code: {response.status_code}")
         print(response.text)
