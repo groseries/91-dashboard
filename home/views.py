@@ -2,7 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
 from datetime import datetime, timedelta
+import pytz
 from .scripts import *
+from .models import *
+
 # Create your views here.
 
 
@@ -70,41 +73,116 @@ class Shortcuts(View):
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
 
-class DetTracker(View):
-    template_name = "det_dash.html"
+class ClassSchedule(View):
+    template_name = "class_schedule_page.html"
 
 
     def get_context_data(self, request, **kwargs):
+        """
+        Go ahead and make this import the event data into the models- then once it works we can back track as required an include a catch to prevent any duplicates
+        """
+
         context={}
-        people_list = [
-            {"rank": "LTJG", "name": "Asher"},
-            {"rank": "LTJG", "name": "Domler"},
-            {"rank": "LTJG", "name": "Figueroa"},
-            {"rank": "LTJG", "name": "Gray"},
-            {"rank": "1stLt", "name": "Kent"},
-            {"rank": "LTJG", "name": "Markert"},
-            {"rank": "1stLt", "name": "Meier"},
-            {"rank": "1stLt", "name": "Rodts"},
-            {"rank": "1stLt", "name": "Roser"},
-            {"rank": "Capt", "name": "Ross"},
-            {"rank": "LTJG", "name": "Seepe"},
-            {"rank": "LTJG", "name": "Winkler"},
-        ]
-        context["studs"]=people_list
+
+        context["studs"]=SNA.objects.all()
         context['sna_today_data']={}
-        today = datetime.now().strftime("%Y-%m-%d")
+        context['sna_tomorrow_data']={}
 
+        # Get the current date and time in a specific time zone
+        desired_time_zone = pytz.timezone('America/Chicago')  # Replace with your desired time zone
+        current_time = datetime.now(desired_time_zone)
+
+        # Get today's date in the desired time zone
+        today = current_time.strftime("%Y-%m-%d")
+
+        # Get tomorrow's date in the desired time zone
+        tomorrow = (current_time + timedelta(days=1)).strftime("%Y-%m-%d")
+        dates = [today, tomorrow]
+       
         for stud in context["studs"]:
-            json_data = get_ez_sked_data(stud['name'],stud['rank'], today)
-            today_data= []
-            for key, val in json_data.items():
-                today_data.append(val)
 
-            context["sna_today_data"][stud['name']] = today_data
+            existing_events = EzSkedEvent.objects.filter(date=today, sna=stud)
+            todays_event=existing_events
+            if not existing_events:
+                json_data = get_ez_sked_data(stud.name,stud.rank, today)
+
+                for line, event_data in json_data.items():
+                        
+                        event_name = event_data["event"]
+                        try:
+                            end_time = localize_time_from_integer(event_data["land_time"])
+                        except:
+                            end_time = localize_time_from_integer(event_data["brief_time"]+200)
+                        # Assuming sna is defined and available
+                        event = EzSkedEvent(
+                            date=today,
+                            event_name=event_name,
+                            sna=stud,
+                            event_type=event_data["type"],
+                            remarks=event_data["remark"],
+                            brief_time=localize_time_from_integer(event_data["brief_time"]),
+                            takeoff_time=localize_time_from_integer(event_data["takeoff_time"]),
+                            land_time=end_time,  # You can set the land time as per your requirement
+                            crew_1 = event_data['crew_1'],
+                            crew_2 = event_data['crew_2']
+                        )
+                        event.save()
+                todays_event=event
+
+            context["sna_today_data"][stud.name] = todays_event
         
+        for stud in context["studs"]:
+
+            existing_events = EzSkedEvent.objects.filter(date=tomorrow, sna=stud)
+            tomorrows_event=existing_events
+
+            if not existing_events:
+                json_data = get_ez_sked_data(stud.name,stud.rank, tomorrow)
+
+                for line, event_data in json_data.items():
+                        
+                        event_name = event_data["event"]
+                        try:
+                            end_time = localize_time_from_integer(event_data["land_time"])
+                        except:
+                            end_time = localize_time_from_integer(event_data["brief_time"]+200)
+                        # Assuming sna is defined and available
+                        event = EzSkedEvent(
+                            date=tomorrow,
+                            event_name=event_name,
+                            sna=stud,
+                            event_type=event_data["type"],
+                            remarks=event_data["remark"],
+                            brief_time=localize_time_from_integer(event_data["brief_time"]),
+                            takeoff_time=localize_time_from_integer(event_data["takeoff_time"]),
+                            land_time=end_time,  # You can set the land time as per your requirement
+                            crew_1 = event_data['crew_1'],
+                            crew_2 = event_data['crew_2']
+                        )
+                        event.save()
+                tomorrows_event=event
+
+            context["sna_tomorrow_data"][stud.name] = tomorrows_event
+        
+        context['todays_date'] = str(today)
+        context['tomorrows_date']=str(tomorrow)
+        context['tomorrow_sched_url'] = f"https://www.cnatra.navy.mil/scheds/tw1/SQ-VT-9/!{tomorrow}!VT-9!Frontpage.pdf"
+        context["today_sched_url"] = f"https://www.cnatra.navy.mil/scheds/tw1/SQ-VT-9/!{today}!VT-9!Frontpage.pdf"
         
         return context
 
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(request, **kwargs)
         return render(request, self.template_name, context)
+
+
+class ClassStats(View):
+    template_name = "class_stats_page.html"
+
+    def get_context_data(self, request, **kwargs):
+        return {}
+
+    def get(self, request, *args, **kwargs):
+            context = self.get_context_data(request, **kwargs)
+            return render(request, self.template_name, context)
+

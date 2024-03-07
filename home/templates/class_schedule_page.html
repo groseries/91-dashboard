@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'schedule_card.html' with data=sna_today_data date=todays_date link=today_sched_url %}
+</br>
+</br>
+{% include 'schedule_card.html' with data=sna_tomorrow_data date=tomorrows_date link=tomorrow_sched_url %}
+
+{% comment %} Change schedule to be blocks on a calendar {% endcomment %}
+
+
+
+{% endblock content%}

@@ -45,10 +45,10 @@
         {% if request.user.is_superuser %}
         <a href="{% url 'admin:index' %}" class="nav-link">
         {% else %}
-        <a href="{% url 'det_tracker' %}" class="nav-link">
+        <a href="{% url 'class_schedule' %}" class="nav-link">
         {% endif %}
           <span class="sidebar-icon" style="flex-shrink: 0; margin-right: 10px;">
-            <i class="fa-solid fa-chart-simple" style="font-size: 1.25rem; color: currentColor; vertical-align: middle;"></i>
+            <i class="fa-solid fa-grip" style="font-size: 1.25rem; color: currentColor; vertical-align: middle;"></i>
           </span>
           <span class="sidebar-text">Class Schedule</span>
         </a>
@@ -58,7 +58,7 @@
         {% if request.user.is_superuser %}
         <a href="{% url 'admin:index' %}" class="nav-link">
         {% else %}
-        <a href="{% url 'det_tracker' %}" class="nav-link">
+        <a href="{% url 'stats' %}" class="nav-link">
         {% endif %}
           <span class="sidebar-icon" style="flex-shrink: 0; margin-right: 10px;">
             <i class="fa-solid fa-chart-simple" style="font-size: 1.25rem; color: currentColor; vertical-align: middle;"></i>

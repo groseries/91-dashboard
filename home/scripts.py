@@ -4,6 +4,31 @@ from datetime import datetime, timedelta
 from tfr_scraper import tfr_scraper
 from .fetchNotams import *
 
+import pytz
+from datetime import datetime, time, timedelta
+
+def localize_time_from_integer(input_integer, timezone_name='America/Chicago'):
+    # Use 'America/Chicago' as the default timezone
+    desired_time_zone = pytz.timezone(timezone_name)
+
+    # Convert the arbitrary integer to a time object
+    input_hour = input_integer // 100  # Extract the hour from the integer
+    input_minute = input_integer % 100  # Extract the minute from the integer
+    input_time = time(input_hour, input_minute)  # Create a time object
+
+    # Create a datetime object by combining the time with a dummy date
+    dummy_date = datetime.now().date()  # Use today's date as a dummy date
+    input_datetime = datetime.combine(dummy_date, input_time)
+
+    # Localize the datetime to the desired time zone
+    localized_datetime = desired_time_zone.localize(input_datetime, is_dst=None)
+
+    # Extract the time component from the localized datetime
+    localized_time = localized_datetime.time()
+
+    return localized_time.strftime('%H:%M')  # Return the localized time in 24-hour format
+
+
 def get_sunrise_sunset(lat, lng):
     base_url = "https://api.sunrisesunset.io/json"
     params = {

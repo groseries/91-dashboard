@@ -18,3 +18,11 @@ def unix_timestamp_to_datetime(value):
     """
     dt = datetime.datetime.utcfromtimestamp(value)
     return dt.strftime('%m/%d, %I:%M %p')
+
+
+@register.filter(name='split')
+def split(value, key):
+    """
+        Returns the value turned into a list.
+    """
+    return value.split(key)

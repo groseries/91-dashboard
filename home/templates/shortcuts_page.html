@@ -2,19 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="container m-4" >
-  <div class="row">
-    <div class="col-4 d-flex align-items-stretch">
-      {% include 'time_card_local.html' %}
-    </div>
-    <div class="col-4 d-flex align-items-stretch">
-      {% include 'time_card_utc.html' %}
-    </div>
-    <div class="col-4 d-flex align-items-stretch">
-      {% include 'time_card_sunset.html' with suntimes=sunrise_set %}
-    </div>
-  </div>
-</div>
+
 
 <div style="display: flex; justify-content: center; align-items: left;">
   <a class='mr-8'href="https://www.icloud.com/shortcuts/6845ef7c429e4dd598f2e4f855be780d" style="position: relative;">
@@ -35,37 +23,6 @@
 
 
 </div>
-{% comment %} {% include 'time_card.html' %} {% endcomment %}
 
-{% comment %} </div>
-<div id="result-container">
-  <!-- Display the received data here -->
-</div>
-<div> {% endcomment %}
-
-{% comment %} </div> {% endcomment %}
-
-<div></div>
-{% comment %} use this same script to update the weather every 5 minutes {% endcomment %}
-    <script>
-    function updateClock() {
-      var clockElement = document.getElementById('clock');
-      var currentTime = new Date().toLocaleTimeString();
-      clockElement.innerHTML = currentTime;
-    }
-    // Update the clock every second (1000 milliseconds)
-    setInterval(updateClock, 1000);
-    </script>
-
-    <script>
-      function updateUTCClock() {
-        var utcClockElement = document.getElementById('utcClock');
-        var currentUTCTime = new Date().toUTCString().split(' ')[4]; // Extracting only the time part
-        utcClockElement.innerHTML = currentUTCTime;
-      }
-      
-      // Update the UTC clock every second (1000 milliseconds)
-      setInterval(updateUTCClock, 1000);
-      </script>
 
 {% endblock content%}

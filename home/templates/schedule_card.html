@@ -1,13 +1,16 @@
 {% load custom_filters %}
+{% load tz %}
 
+{% timezone "America/Chicago" %}
+    
 <div class="card border-0 shadow">
     <div class="card-header">
       <div class="row align-items-center">
         <div class="col">
-          <h2 class="fs-5 fw-bold mb-0">Class Schedule {% now "jS F Y" %}</h2>
+          <h2 class="fs-5 fw-bold mb-0">Class Schedule {{ date }}</h2>
         </div>
         <div class="col text-end">
-            <a href="{% url 'schedule' %}" class="btn btn-sm btn-primary">Schedule</a>
+            <a href="{{ link }}" class="btn btn-sm btn-primary">Schedule</a>
         </div>
       </div>
     </div>
@@ -38,10 +41,15 @@
             {% if events|length > 0 %}
             {% for line_data in events %}
               <td class="fw-bolder text-gray-500">
-                  {{ line_data.event }}
+                  {{ line_data.event_name }}
               </td>
               <td class="fw-bolder text-gray-500">
+                {% with crew_parts=line_data.crew_1|split:" " %}
+                 {% if crew_parts.0|lower != stud|lower %}
                   {{ line_data.crew_1 }}
+                  {% endif %}
+                        
+                  {%endwith%}
               </td>
               <td class="fw-bolder text-gray-500">
                   {{ line_data.brief_time }}
@@ -76,3 +84,5 @@
     </div>
   </div>
 </div>
+
+{% endtimezone %}
