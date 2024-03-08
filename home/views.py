@@ -5,6 +5,10 @@ from datetime import datetime, timedelta
 import pytz
 from .scripts import *
 from .models import *
+from django.db.models import Count, IntegerField
+from django.db.models.functions import ExtractWeekDay
+from django.db.models.functions import ExtractHour
+
 
 # Create your views here.
 
@@ -103,31 +107,28 @@ class ClassSchedule(View):
 
             existing_events = EzSkedEvent.objects.filter(date=today, sna=stud)
             todays_event=existing_events
+
             if not existing_events:
                 json_data = get_ez_sked_data(stud.name,stud.rank, today)
-
+                
                 for line, event_data in json_data.items():
-                        
-                        event_name = event_data["event"]
-                        try:
-                            end_time = localize_time_from_integer(event_data["land_time"])
-                        except:
-                            end_time = localize_time_from_integer(event_data["brief_time"]+200)
-                        # Assuming sna is defined and available
-                        event = EzSkedEvent(
-                            date=today,
-                            event_name=event_name,
-                            sna=stud,
-                            event_type=event_data["type"],
-                            remarks=event_data["remark"],
-                            brief_time=localize_time_from_integer(event_data["brief_time"]),
-                            takeoff_time=localize_time_from_integer(event_data["takeoff_time"]),
-                            land_time=end_time,  # You can set the land time as per your requirement
-                            crew_1 = event_data['crew_1'],
-                            crew_2 = event_data['crew_2']
-                        )
-                        event.save()
-                todays_event=event
+                    ## Handle Not on schedule case
+                    if "error" in line: 
+                        continue
+
+                    event_type = event_data["type"]
+
+                ## Handle different Cases
+                    if event_type == "duty":
+                        event = create_duty_event(stud, event_data, today)
+                    elif event_type == "simulator":
+                        event = create_sim_event(stud, event_data, today)
+                    elif event_type == "flight":
+                        event = create_flight_event(stud, event_data, today)
+                    else:
+                        print(f"{Exception}Unknown event type")
+                    event.save()
+                    todays_event=event
 
             context["sna_today_data"][stud.name] = todays_event
         
@@ -138,29 +139,26 @@ class ClassSchedule(View):
 
             if not existing_events:
                 json_data = get_ez_sked_data(stud.name,stud.rank, tomorrow)
-
+                ## Handle Not on schedule case
+                
                 for line, event_data in json_data.items():
+                    ## Handle Not on schedule case
+                    if "error" in line: 
+                        continue
                         
-                        event_name = event_data["event"]
-                        try:
-                            end_time = localize_time_from_integer(event_data["land_time"])
-                        except:
-                            end_time = localize_time_from_integer(event_data["brief_time"]+200)
-                        # Assuming sna is defined and available
-                        event = EzSkedEvent(
-                            date=tomorrow,
-                            event_name=event_name,
-                            sna=stud,
-                            event_type=event_data["type"],
-                            remarks=event_data["remark"],
-                            brief_time=localize_time_from_integer(event_data["brief_time"]),
-                            takeoff_time=localize_time_from_integer(event_data["takeoff_time"]),
-                            land_time=end_time,  # You can set the land time as per your requirement
-                            crew_1 = event_data['crew_1'],
-                            crew_2 = event_data['crew_2']
-                        )
-                        event.save()
-                tomorrows_event=event
+                    event_type = event_data["type"]
+
+                ## Handle Duty Case
+                    if event_type == "duty":
+                        event = create_duty_event(stud, event_data, tomorrow)
+                    elif event_type == "simulator":
+                        event = create_sim_event(stud, event_data, tomorrow)
+                    elif event_type == "flight":
+                        event = create_flight_event(stud, event_data, tomorrow)
+                    else:
+                        print(f"{Exception}Unknown event type")
+                    event.save()
+                    tomorrows_event=event
 
             context["sna_tomorrow_data"][stud.name] = tomorrows_event
         
@@ -180,7 +178,66 @@ class ClassStats(View):
     template_name = "class_stats_page.html"
 
     def get_context_data(self, request, **kwargs):
-        return {}
+        
+        context = {}
+        
+        target_time = 6  # Replace with the specific time in the format "HH:MM"
+
+        # Query for SNA with the most early events (before target time AM) and access the name and number of early events
+        early_bird = (
+            SNA.objects.filter(ezskedevent__brief_time__hour__lt=target_time)  # Filter events before 9 AM
+            .values('name')  # Select the SNA name
+            .annotate(num_early_events=Count('ezskedevent'))  # Count the number of early events for each SNA
+            .order_by('-num_early_events')[:1]
+        )
+        # Iterate over the query results and print the SNA name and the number of early events
+        for result in early_bird:
+            print(f"SNA Name: {result['name']}, Number of Early Events: {result['num_early_events']}")
+
+        early_bird_rankings = (
+            SNA.objects.filter(ezskedevent__brief_time__hour__lt=target_time)  # Filter events before 9 AM
+            .values('name')  # Select the SNA name
+            .annotate(num_early_events=Count('ezskedevent'))  # Count the number of early events for each SNA
+            .order_by('-num_early_events')  # Order by the number of early events in descending order
+        )
+        # Iterate over the query results and print the ranking of SNAs based on the number of early events
+        for rank, result in enumerate(early_bird_rankings, start=1):
+            print(f"Rank {rank}: SNA Name: {result['name']}, Number of Early Events: {result['num_early_events']}")
+
+
+        # # Query for SNAs with the most events beginning after 8 PM
+        target_time = 19
+        # Query for SNA with the most early events (before target time AM) and access the name and number of early events
+        night_owl = (
+            SNA.objects.filter(ezskedevent__brief_time__hour__gt=target_time)  # Filter events before 9 AM
+            .values('name')  # Select the SNA name
+            .annotate(num_late_events=Count('ezskedevent'))  # Count the number of early events for each SNA
+            .order_by('-num_late_events')[:1]
+        )
+        # Iterate over the query results and print the SNA name and the number of early events
+        for result in night_owl:
+            print(f"SNA Name: {result['name']}, Number of Late Events: {result['num_late_events']}")
+
+        ranking_of_snas_after_8pm = (
+            SNA.objects.filter(ezskedevent__brief_time__hour__gt=target_time)  # Filter events after 8 PM
+            .values('name')  # Select the SNA name
+            .annotate(num_late_events=Count('ezskedevent'))  # Count the number of late events for each SNA
+            .order_by('-num_late_events')  # Order by the number of late events in descending order
+        )
+
+        # Iterate over the query results and print the ranking of SNAs based on the number of events after 8 PM
+        for rank, result in enumerate(ranking_of_snas_after_8pm, start=1):
+            print(f"Rank {rank}: SNA Name: {result['name']}, Number of Late Events: {result['num_late_events']}")
+
+
+
+
+        # Query for SNAs with the most events on weekend days (Saturday and Sunday)
+        # snas_with_most_weekend_events = (SNA.objects.annotate(num_weekend_events=Count('events', filter=ExtractWeekDay('date', output_field=IntegerField())__in=[1, 7])).order_by('-num_weekend_events')[:1])
+        # snas_with_most_weekend_events contains the SNA(s) with the most events on weekend days
+
+
+        return context
 
     def get(self, request, *args, **kwargs):
             context = self.get_context_data(request, **kwargs)

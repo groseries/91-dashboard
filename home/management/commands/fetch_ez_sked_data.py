@@ -29,7 +29,7 @@ class Command(BaseCommand):
         data_dict = {}
 
 
-        start_date = datetime(2023, 9, 30)
+        start_date = datetime(2024, 2, 13)
         end_date = datetime.now()
 
 
@@ -56,7 +56,7 @@ class Command(BaseCommand):
             # Save data to JSON file every save_interval days
             if (current_date - start_date).days % save_interval == 0:
                 self.save_data(data_dict)
-                self.stdout.write(self.style.SUCCESS(f'Successfully saved week of current date:{current_date} to JSON'))
+                self.stdout.write(self.style.SUCCESS(f'Successfully saved week of date:{current_date} to JSON'))
 
             # Move to the next day
             current_date += timedelta(days=1)

@@ -3,6 +3,7 @@ import json
 from datetime import datetime, timedelta
 from tfr_scraper import tfr_scraper
 from .fetchNotams import *
+from .models import *
 
 import pytz
 from datetime import datetime, time, timedelta
@@ -53,7 +54,6 @@ def get_sunrise_sunset(lat, lng):
         return None
 
 def get_ez_sked_data(name, rank, date):
-
     url = "https://ezsked.co/api/retrieve_line/"
     headers = {
         "Authorization": "Token 8128e5ef3b89f5f125a7639baa62b97940da4f01",
@@ -67,10 +67,16 @@ def get_ez_sked_data(name, rank, date):
         "squadron": "9"
     }
     
-    response = requests.post(url, headers=headers, data=json.dumps(data))
-    resp = response.json()
-
-    return resp 
+    try:
+        response = requests.post(url, headers=headers, data=json.dumps(data))
+        response.raise_for_status()  # This will raise an HTTPError for 4xx or 5xx status codes
+        resp = response.json()
+        return resp
+    except requests.exceptions.HTTPError as err:
+        # Handle the 500 error here
+        print(f"HTTP error occurred: {err}")
+        # You can raise a custom exception, log the error, or return a specific response
+        return None
 
 def get_metar_data(airport, date_zulu_time):
 
@@ -141,3 +147,48 @@ def post_ahas_form(airport, date, time):
         # soup = BeautifulSoup(response.text, 'html.parser')
         pass
 
+
+def create_duty_event(sna, data, date):
+    event = EzSkedEvent(
+                date=date,
+                event_name=data["duty"],
+                sna=sna,
+                event_type=data["type"],
+                remarks=None,
+                brief_time=localize_time_from_integer(data["sign_in"]),
+                takeoff_time=None,
+                land_time=localize_time_from_integer(data["sign_out"]),  # You can set the land time as per your requirement
+                crew_1 = data['crew'],
+                crew_2 = None
+            )
+    return event
+
+def create_flight_event(sna, data, date):
+    event = EzSkedEvent(
+                                date=date,
+                                event_name=data['event'],
+                                sna=sna,
+                                event_type=data["type"],
+                                remarks=data["remark"],
+                                brief_time=localize_time_from_integer(data["brief_time"]),
+                                takeoff_time=localize_time_from_integer(data["takeoff_time"]),
+                                land_time=localize_time_from_integer(data["land_time"]),  # You can set the land time as per your requirement
+                                crew_1 = data['crew_1'],
+                                crew_2 = data['crew_2']
+                            )
+    return event
+
+def create_sim_event(sna, data, date):
+    event = EzSkedEvent(
+                date=date,
+                event_name=data["event"],
+                sna=sna,
+                event_type=data["type"],
+                remarks=data["remark"],
+                brief_time=localize_time_from_integer(data["brief_time"]),
+                takeoff_time=localize_time_from_integer(data["takeoff_time"]),
+                land_time=localize_time_from_integer(data["brief_time"]+200),  # You can set the land time as per your requirement
+                crew_1 = data['crew_1'],
+                crew_2 = data['crew_2']
+            )
+    return event

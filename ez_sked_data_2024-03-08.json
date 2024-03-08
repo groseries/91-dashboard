@@ -1,0 +1,2914 @@
+{
+  "2024-02-13": {
+    "Asher": {
+      "line_0": {
+        "type": "duty",
+        "duty": "IWO",
+        "crew": "LTJG ASHER",
+        "sign_in": 1800,
+        "sign_out": 600
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1800,
+        "takeoff_time": 1830,
+        "box_no": "812",
+        "crew_1": "CIV WEBSTER",
+        "crew_2": "LTJG DOMLER",
+        "event": "IR3301",
+        "remark": null
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1730,
+        "takeoff_time": 1800,
+        "box_no": "810",
+        "crew_1": "CIV WINKLER",
+        "crew_2": "LTJG FIGUEROA",
+        "event": "IR3301",
+        "remark": null
+      }
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "error": "no lines found matching your request"
+    },
+    "Markert": {
+      "error": "no lines found matching your request"
+    },
+    "Meier": {
+      "error": "no lines found matching your request"
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 990,
+        "brief_time": 1300,
+        "takeoff_time": 1445,
+        "land_time": 1615,
+        "crew_1": "Maj CYLKOWSKI",
+        "crew_2": "1stLt RODTS",
+        "event": "IR4104",
+        "flight_time": "1.5",
+        "remark": "O/I"
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1028,
+        "brief_time": 1600,
+        "takeoff_time": 1745,
+        "land_time": 1915,
+        "crew_1": "Maj CYLKOWSKI",
+        "crew_2": "1stLt RODTS",
+        "event": "IR4105",
+        "flight_time": "1.5",
+        "remark": "RTB"
+      }
+    },
+    "Roser": {
+      "error": "no lines found matching your request"
+    },
+    "Ross": {
+      "error": "no lines found matching your request"
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 800,
+        "takeoff_time": 830,
+        "box_no": "808",
+        "crew_1": "CIV HAMMES",
+        "crew_2": "LTJG SEEPE",
+        "event": "IR3301",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1230,
+        "takeoff_time": 1300,
+        "box_no": "808",
+        "crew_1": "CIV WINKLER",
+        "crew_2": "LTJG SEEPE",
+        "event": "IR3302",
+        "remark": null
+      }
+    },
+    "Winkler": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1130,
+        "takeoff_time": 1200,
+        "box_no": "810",
+        "crew_1": "CIV FARLEY",
+        "crew_2": "LTJG WINKLER",
+        "event": "IR3302",
+        "remark": null
+      }
+    }
+  },
+  "2024-02-15": {
+    "Asher": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1300,
+        "takeoff_time": 1330,
+        "box_no": "810",
+        "crew_1": "CIV AUSBROOKS",
+        "crew_2": "LTJG ASHER",
+        "event": "IR3490",
+        "remark": null
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "duty",
+        "duty": "DUTY DRIVER (ON CALL)",
+        "crew": "LTJG DOMLER",
+        "sign_in": 0,
+        "sign_out": 2359
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1800,
+        "takeoff_time": 1830,
+        "box_no": "812",
+        "crew_1": "CIV GADDIE",
+        "crew_2": "LTJG FIGUEROA",
+        "event": "IR3490",
+        "remark": null
+      }
+    },
+    "Gray": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1130,
+        "takeoff_time": 1200,
+        "box_no": "811",
+        "crew_1": "CIV HAY",
+        "crew_2": "LTJG GRAY",
+        "event": "IR3301",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1530,
+        "takeoff_time": 1600,
+        "box_no": "808",
+        "crew_1": "CIV GADDIE",
+        "crew_2": "LTJG GRAY",
+        "event": "IR3302",
+        "remark": null
+      }
+    },
+    "Kent": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1200,
+        "takeoff_time": 1230,
+        "box_no": "812",
+        "crew_1": "CIV CARRIER",
+        "crew_2": "1stLt KENT",
+        "event": "IR3301",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 920,
+        "brief_time": 700,
+        "takeoff_time": 845,
+        "land_time": 1015,
+        "crew_1": "CAPT ASHLOCK",
+        "crew_2": "1stLt KENT",
+        "event": "IR4105",
+        "flight_time": "1.5",
+        "remark": null
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 938,
+        "brief_time": 830,
+        "takeoff_time": 1015,
+        "land_time": 1145,
+        "crew_1": "Capt SEVY",
+        "crew_2": "LTJG MARKERT",
+        "event": "IR4104",
+        "flight_time": "1.5",
+        "remark": "O/I"
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 977,
+        "brief_time": 1130,
+        "takeoff_time": 1315,
+        "land_time": 1445,
+        "crew_1": "Capt SEVY",
+        "crew_2": "LTJG MARKERT",
+        "event": "IR4105",
+        "flight_time": "1.5",
+        "remark": "RTB"
+      }
+    },
+    "Meier": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1700,
+        "takeoff_time": 1730,
+        "box_no": "808",
+        "crew_1": "CIV ROMAN",
+        "crew_2": "1stLt MEIER",
+        "event": "IR3303",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 2030,
+        "takeoff_time": 2100,
+        "box_no": "810",
+        "crew_1": "CIV GADDIE",
+        "crew_2": "1stLt MEIER",
+        "event": "IR3490",
+        "remark": null
+      }
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1230,
+        "takeoff_time": 1300,
+        "box_no": "809",
+        "crew_1": "CIV POGUE",
+        "crew_2": "1stLt RODTS",
+        "event": "IR3303",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1730,
+        "takeoff_time": 1800,
+        "box_no": "810",
+        "crew_1": "CIV GOODMAN",
+        "crew_2": "1stLt RODTS",
+        "event": "IR3490",
+        "remark": null
+      }
+    },
+    "Roser": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1600,
+        "takeoff_time": 1630,
+        "box_no": "810",
+        "crew_1": "CIV SIMMONS",
+        "crew_2": "Capt ROSER",
+        "event": "IR3303",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1930,
+        "takeoff_time": 2000,
+        "box_no": "812",
+        "crew_1": "CIV ROMAN",
+        "crew_2": "Capt ROSER",
+        "event": "IR3490",
+        "remark": null
+      }
+    },
+    "Ross": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1500,
+        "takeoff_time": 1530,
+        "box_no": "812",
+        "crew_1": "CIV GOODMAN",
+        "crew_2": "Capt ROSS",
+        "event": "IR3302",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 2030,
+        "takeoff_time": 2100,
+        "box_no": "808",
+        "crew_1": "CIV SIMMONS",
+        "crew_2": "Capt ROSS",
+        "event": "IR3303",
+        "remark": null
+      }
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "duty",
+        "duty": "AM SDO",
+        "crew": "LTJG SEEPE",
+        "sign_in": 600,
+        "sign_out": 1400
+      }
+    },
+    "Winkler": {
+      "line_0": {
+        "type": "duty",
+        "duty": "PM SDO",
+        "crew": "LTJG WINKLER",
+        "sign_in": 1400,
+        "sign_out": 2200
+      }
+    }
+  },
+  "2024-02-16": {
+    "Asher": {
+      "error": "no lines found matching your request"
+    },
+    "Domler": {
+      "error": "no lines found matching your request"
+    },
+    "Figueroa": {
+      "error": "no lines found matching your request"
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1530,
+        "takeoff_time": 1600,
+        "box_no": "808",
+        "crew_1": "CIV ROMAN",
+        "crew_2": "1stLt KENT",
+        "event": "IR3302",
+        "remark": null
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1500,
+        "takeoff_time": 1530,
+        "box_no": "812",
+        "crew_1": "CIV FARLEY",
+        "crew_2": "LTJG MARKERT",
+        "event": "IR3301",
+        "remark": null
+      }
+    },
+    "Meier": {
+      "error": "no lines found matching your request"
+    },
+    "Rodts": {
+      "error": "no lines found matching your request"
+    },
+    "Roser": {
+      "error": "no lines found matching your request"
+    },
+    "Ross": {
+      "error": "no lines found matching your request"
+    },
+    "Seepe": {
+      "error": "no lines found matching your request"
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  },
+  "2024-02-17": {
+    "Asher": {
+      "error": "no lines found matching your request"
+    },
+    "Domler": {
+      "error": "no lines found matching your request"
+    },
+    "Figueroa": {
+      "error": "no lines found matching your request"
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "error": "no lines found matching your request"
+    },
+    "Markert": {
+      "error": "no lines found matching your request"
+    },
+    "Meier": {
+      "error": "no lines found matching your request"
+    },
+    "Rodts": {
+      "error": "no lines found matching your request"
+    },
+    "Roser": {
+      "error": "no lines found matching your request"
+    },
+    "Ross": {
+      "error": "no lines found matching your request"
+    },
+    "Seepe": {
+      "error": "no lines found matching your request"
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  },
+  "2024-02-18": {
+    "Asher": {
+      "error": "no lines found matching your request"
+    },
+    "Domler": {
+      "error": "no lines found matching your request"
+    },
+    "Figueroa": {
+      "error": "no lines found matching your request"
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "error": "no lines found matching your request"
+    },
+    "Markert": {
+      "error": "no lines found matching your request"
+    },
+    "Meier": {
+      "error": "no lines found matching your request"
+    },
+    "Rodts": {
+      "error": "no lines found matching your request"
+    },
+    "Roser": {
+      "error": "no lines found matching your request"
+    },
+    "Ross": {
+      "error": "no lines found matching your request"
+    },
+    "Seepe": {
+      "error": "no lines found matching your request"
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  },
+  "2024-02-19": {
+    "Asher": {
+      "error": "no lines found matching your request"
+    },
+    "Domler": {
+      "error": "no lines found matching your request"
+    },
+    "Figueroa": {
+      "error": "no lines found matching your request"
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "error": "no lines found matching your request"
+    },
+    "Markert": {
+      "error": "no lines found matching your request"
+    },
+    "Meier": {
+      "error": "no lines found matching your request"
+    },
+    "Rodts": {
+      "error": "no lines found matching your request"
+    },
+    "Roser": {
+      "error": "no lines found matching your request"
+    },
+    "Ross": {
+      "error": "no lines found matching your request"
+    },
+    "Seepe": {
+      "error": "no lines found matching your request"
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  },
+  "2024-02-20": {
+    "Asher": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1400,
+        "takeoff_time": 1430,
+        "box_no": "808",
+        "crew_1": "CIV FARLEY",
+        "crew_2": "LTJG ASHER",
+        "event": "NTR3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1800,
+        "takeoff_time": 1830,
+        "box_no": "810",
+        "crew_1": "CIV STCLAIR",
+        "crew_2": "LTJG ASHER",
+        "event": "NTR2101",
+        "remark": null
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1530,
+        "takeoff_time": 1600,
+        "box_no": "808",
+        "crew_1": "CIV STCLAIR",
+        "crew_2": "LTJG DOMLER",
+        "event": "NTR3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1930,
+        "takeoff_time": 2000,
+        "box_no": "808",
+        "crew_1": "CIV RAUENHORST",
+        "crew_2": "LTJG DOMLER",
+        "event": "NTR2101",
+        "remark": null
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1600,
+        "takeoff_time": 1630,
+        "box_no": "810",
+        "crew_1": "CIV RICHARDSON",
+        "crew_2": "LTJG FIGUEROA",
+        "event": "NTR3101",
+        "remark": null
+      }
+    },
+    "Gray": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1100,
+        "takeoff_time": 1130,
+        "box_no": "808",
+        "crew_1": "CIV RICHARDSON",
+        "crew_2": "LTJG GRAY",
+        "event": "IR3303",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1500,
+        "takeoff_time": 1530,
+        "box_no": "812",
+        "crew_1": "CIV YOSKOVICH",
+        "crew_2": "LTJG GRAY",
+        "event": "IR3490",
+        "remark": null
+      }
+    },
+    "Kent": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 730,
+        "takeoff_time": 800,
+        "box_no": "812",
+        "crew_1": "CIV YOSKOVICH",
+        "crew_2": "1stLt KENT",
+        "event": "IR3303",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1130,
+        "takeoff_time": 1200,
+        "box_no": "810",
+        "crew_1": "CIV FARLEY",
+        "crew_2": "1stLt KENT",
+        "event": "IR3490",
+        "remark": null
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 600,
+        "takeoff_time": 630,
+        "box_no": "812",
+        "crew_1": "CIV ROSS",
+        "crew_2": "LTJG MARKERT",
+        "event": "IR3302",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1000,
+        "takeoff_time": 1030,
+        "box_no": "810",
+        "crew_1": "CIV YOSKOVICH",
+        "crew_2": "LTJG MARKERT",
+        "event": "IR3303",
+        "remark": null
+      }
+    },
+    "Meier": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 630,
+        "takeoff_time": 700,
+        "box_no": "808",
+        "crew_1": "CIV FARLEY",
+        "crew_2": "1stLt MEIER",
+        "event": "NTR3101",
+        "remark": null
+      }
+    },
+    "Rodts": {
+      "error": "no lines found matching your request"
+    },
+    "Roser": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 900,
+        "takeoff_time": 930,
+        "box_no": "812",
+        "crew_1": "CIV FARLEY",
+        "crew_2": "Capt ROSER",
+        "event": "NTR3101",
+        "remark": null
+      }
+    },
+    "Ross": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 930,
+        "takeoff_time": 1000,
+        "box_no": "808",
+        "crew_1": "CIV GADDIE",
+        "crew_2": "Capt ROSS",
+        "event": "IR3490",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1330,
+        "takeoff_time": 1400,
+        "box_no": "812",
+        "crew_1": "CIV RICHARDSON",
+        "crew_2": "Capt ROSS",
+        "event": "NTR3101",
+        "remark": null
+      }
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 700,
+        "takeoff_time": 730,
+        "box_no": "810",
+        "crew_1": "CIV GADDIE",
+        "crew_2": "LTJG SEEPE",
+        "event": "NTR3101",
+        "remark": null
+      }
+    },
+    "Winkler": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 530,
+        "takeoff_time": 600,
+        "box_no": "810",
+        "crew_1": "CIV GIANAKOS",
+        "crew_2": "LTJG WINKLER",
+        "event": "NTR3101",
+        "remark": null
+      }
+    }
+  },
+  "2024-02-21": {
+    "Asher": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1200,
+        "takeoff_time": 1230,
+        "box_no": "812",
+        "crew_1": "CIV SAYLOR",
+        "crew_2": "LTJG ASHER",
+        "event": "NTR2101",
+        "remark": null
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "duty",
+        "duty": "DUTY DRIVER (ON CALL)",
+        "crew": "LTJG DOMLER",
+        "sign_in": 0,
+        "sign_out": 2359
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1900,
+        "takeoff_time": 1930,
+        "box_no": "810",
+        "crew_1": "CIV SIMMONS",
+        "crew_2": "LTJG FIGUEROA",
+        "event": "NTR2101",
+        "remark": null
+      }
+    },
+    "Gray": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 530,
+        "takeoff_time": 600,
+        "box_no": "810",
+        "crew_1": "CIV GIANAKOS",
+        "crew_2": "LTJG GRAY",
+        "event": "NTR3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 930,
+        "takeoff_time": 1000,
+        "box_no": "808",
+        "crew_1": "CIV CAREY",
+        "crew_2": "LTJG GRAY",
+        "event": "NTR2101",
+        "remark": null
+      }
+    },
+    "Kent": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 600,
+        "takeoff_time": 630,
+        "box_no": "812",
+        "crew_1": "CIV YOSKOVICH",
+        "crew_2": "1stLt KENT",
+        "event": "NTR3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1000,
+        "takeoff_time": 1030,
+        "box_no": "810",
+        "crew_1": "CIV CARRIER",
+        "crew_2": "1stLt KENT",
+        "event": "NTR2101",
+        "remark": null
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1700,
+        "takeoff_time": 1730,
+        "box_no": "808",
+        "crew_1": "CIV POGUE",
+        "crew_2": "LTJG MARKERT",
+        "event": "IR3490",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 2030,
+        "takeoff_time": 2100,
+        "box_no": "810",
+        "crew_1": "CIV DOHERTY",
+        "crew_2": "LTJG MARKERT",
+        "event": "IR3490",
+        "remark": null
+      }
+    },
+    "Meier": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1030,
+        "takeoff_time": 1100,
+        "box_no": "812",
+        "crew_1": "CIV GADDIE",
+        "crew_2": "1stLt MEIER",
+        "event": "NTR2101",
+        "remark": null
+      }
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1230,
+        "takeoff_time": 1300,
+        "box_no": "808",
+        "crew_1": "CIV CARRIER",
+        "crew_2": "1stLt RODTS",
+        "event": "NTR3101",
+        "remark": null
+      }
+    },
+    "Roser": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1730,
+        "takeoff_time": 1800,
+        "box_no": "810",
+        "crew_1": "CIV SANDERS",
+        "crew_2": "Capt ROSER",
+        "event": "NTR2101",
+        "remark": null
+      }
+    },
+    "Ross": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1600,
+        "takeoff_time": 1630,
+        "box_no": "810",
+        "crew_1": "CIV RAUENHORST",
+        "crew_2": "Capt ROSS",
+        "event": "NTR2101",
+        "remark": null
+      }
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 2000,
+        "takeoff_time": 2030,
+        "box_no": "808",
+        "crew_1": "CIV SANDERS",
+        "crew_2": "LTJG SEEPE",
+        "event": "NTR2101",
+        "remark": null
+      }
+    },
+    "Winkler": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1300,
+        "takeoff_time": 1330,
+        "box_no": "810",
+        "crew_1": "CIV GADDIE",
+        "crew_2": "LTJG WINKLER",
+        "event": "NTR2101",
+        "remark": null
+      }
+    }
+  },
+  "2024-02-22": {
+    "Asher": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1036,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "Maj HOLSEY",
+        "crew_2": "LTJG ASHER",
+        "event": "NTR4101",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1037,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "Capt SEVY",
+        "crew_2": "LTJG DOMLER",
+        "event": "NTR4101",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "duty",
+        "duty": "PM SDO",
+        "crew": "LTJG FIGUEROA",
+        "sign_in": 1330,
+        "sign_out": 2130
+      }
+    },
+    "Gray": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1071,
+        "brief_time": 1930,
+        "takeoff_time": 2115,
+        "land_time": 2227,
+        "crew_1": "LTJG SMITH",
+        "crew_2": "LTJG GRAY",
+        "event": "NTR4101",
+        "flight_time": "1.2",
+        "remark": null
+      }
+    },
+    "Kent": {
+      "line_0": {
+        "type": "duty",
+        "duty": "DUTY DRIVER (ON CALL)",
+        "crew": "1stLt KENT",
+        "sign_in": 0,
+        "sign_out": 2359
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1500,
+        "takeoff_time": 1530,
+        "box_no": "812",
+        "crew_1": "CIV RICHARDSON",
+        "crew_2": "LTJG MARKERT",
+        "event": "NTR3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1900,
+        "takeoff_time": 1930,
+        "box_no": "810",
+        "crew_1": "CIV RAUENHORST",
+        "crew_2": "LTJG MARKERT",
+        "event": "NTR2101",
+        "remark": null
+      }
+    },
+    "Meier": {
+      "line_0": {
+        "type": "duty",
+        "duty": "AM SDO",
+        "crew": "1stLt MEIER",
+        "sign_in": 530,
+        "sign_out": 1330
+      }
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1100,
+        "takeoff_time": 1130,
+        "box_no": "808",
+        "crew_1": "CIV HANSCHKE",
+        "crew_2": "1stLt RODTS",
+        "event": "NTR2101",
+        "remark": null
+      }
+    },
+    "Roser": {
+      "line_0": {
+        "type": "duty",
+        "duty": "IWO",
+        "crew": "Capt ROSER",
+        "sign_in": 2130,
+        "sign_out": 530
+      }
+    },
+    "Ross": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1044,
+        "brief_time": 1730,
+        "takeoff_time": 1915,
+        "land_time": 2033,
+        "crew_1": "CIV FINCH",
+        "crew_2": "Capt ROSS",
+        "event": "NTR4101",
+        "flight_time": "1.3",
+        "remark": "MB W/ SEEPE"
+      }
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1038,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "LtCol MINICK",
+        "crew_2": "LTJG SEEPE",
+        "event": "NTR4101",
+        "flight_time": "1.3",
+        "remark": "MB"
+      }
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  },
+  "2024-02-23": {
+    "Asher": {
+      "error": "no lines found matching your request"
+    },
+    "Domler": {
+      "error": "no lines found matching your request"
+    },
+    "Figueroa": {
+      "error": "no lines found matching your request"
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "error": "no lines found matching your request"
+    },
+    "Markert": {
+      "line_0": {
+        "type": "duty",
+        "duty": "PM SDO",
+        "crew": "LTJG MARKERT",
+        "sign_in": 1330,
+        "sign_out": 2130
+      }
+    },
+    "Meier": {
+      "error": "no lines found matching your request"
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "duty",
+        "duty": "IWO",
+        "crew": "1stLt RODTS",
+        "sign_in": 2130,
+        "sign_out": 530
+      }
+    },
+    "Roser": {
+      "error": "no lines found matching your request"
+    },
+    "Ross": {
+      "line_0": {
+        "type": "duty",
+        "duty": "DUTY DRIVER (ON CALL)",
+        "crew": "Capt ROSS",
+        "sign_in": 0,
+        "sign_out": 2359
+      }
+    },
+    "Seepe": {
+      "error": "no lines found matching your request"
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  },
+  "2024-02-24": {
+    "Asher": {
+      "error": "no lines found matching your request"
+    },
+    "Domler": {
+      "error": "no lines found matching your request"
+    },
+    "Figueroa": {
+      "error": "no lines found matching your request"
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "error": "no lines found matching your request"
+    },
+    "Markert": {
+      "error": "no lines found matching your request"
+    },
+    "Meier": {
+      "error": "no lines found matching your request"
+    },
+    "Rodts": {
+      "error": "no lines found matching your request"
+    },
+    "Roser": {
+      "error": "no lines found matching your request"
+    },
+    "Ross": {
+      "error": "no lines found matching your request"
+    },
+    "Seepe": {
+      "error": "no lines found matching your request"
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  },
+  "2024-02-25": {
+    "Asher": {
+      "error": "no lines found matching your request"
+    },
+    "Domler": {
+      "error": "no lines found matching your request"
+    },
+    "Figueroa": {
+      "error": "no lines found matching your request"
+    },
+    "Gray": {
+      "line_0": {
+        "type": "duty",
+        "duty": "DUTY DRIVER (ON CALL)",
+        "crew": "LTJG GRAY",
+        "sign_in": 0,
+        "sign_out": 2359
+      }
+    },
+    "Kent": {
+      "error": "no lines found matching your request"
+    },
+    "Markert": {
+      "error": "no lines found matching your request"
+    },
+    "Meier": {
+      "error": "no lines found matching your request"
+    },
+    "Rodts": {
+      "error": "no lines found matching your request"
+    },
+    "Roser": {
+      "error": "no lines found matching your request"
+    },
+    "Ross": {
+      "error": "no lines found matching your request"
+    },
+    "Seepe": {
+      "error": "no lines found matching your request"
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  },
+  "2024-02-26": {
+    "Asher": {
+      "error": "no lines found matching your request"
+    },
+    "Domler": {
+      "error": "no lines found matching your request"
+    },
+    "Figueroa": {
+      "error": "no lines found matching your request"
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "error": "no lines found matching your request"
+    },
+    "Markert": {
+      "error": "no lines found matching your request"
+    },
+    "Meier": {
+      "error": "no lines found matching your request"
+    },
+    "Rodts": {
+      "error": "no lines found matching your request"
+    },
+    "Roser": {
+      "error": "no lines found matching your request"
+    },
+    "Ross": {
+      "error": "no lines found matching your request"
+    },
+    "Seepe": {
+      "error": "no lines found matching your request"
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  },
+  "2024-02-27": {
+    "Asher": {
+      "error": "no lines found matching your request"
+    },
+    "Domler": {
+      "error": "no lines found matching your request"
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1038,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "Maj KOT",
+        "crew_2": "LTJG FIGUEROA",
+        "event": "NTR4101",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1036,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "LTJG ROSSIELLO ",
+        "crew_2": "1stLt KENT",
+        "event": "NTR4101",
+        "flight_time": "1.3",
+        "remark": "O/I; FCLP\u2019S BOTH LEGS"
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1069,
+        "brief_time": 1930,
+        "takeoff_time": 2115,
+        "land_time": 2233,
+        "crew_1": "LTJG ROSSIELLO",
+        "crew_2": "1stLt KENT",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": "RTB; FCLP\u2019S BOTH LEGS"
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1035,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "CIV PANKHURST",
+        "crew_2": "LTJG MARKERT",
+        "event": "NTR4101",
+        "flight_time": "1.3",
+        "remark": "O/I; FCLP\u2019S BOTH LEGS"
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1068,
+        "brief_time": 1930,
+        "takeoff_time": 2115,
+        "land_time": 2233,
+        "crew_1": "CIV PANKHURST",
+        "crew_2": "LTJG MARKERT",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": "RTB; FCLP\u2019S BOTH LEGS"
+      }
+    },
+    "Meier": {
+      "error": "no lines found matching your request"
+    },
+    "Rodts": {
+      "error": "no lines found matching your request"
+    },
+    "Roser": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1037,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "LTJG SMITH",
+        "crew_2": "Capt ROSER",
+        "event": "NTR4101",
+        "flight_time": "1.3",
+        "remark": "O/I; FCLP\u2019S BOTH LEGS"
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1070,
+        "brief_time": 1930,
+        "takeoff_time": 2115,
+        "land_time": 2233,
+        "crew_1": "LTJG SMITH",
+        "crew_2": "Capt ROSER",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": "RTB; FCLP\u2019S BOTH LEGS"
+      }
+    },
+    "Ross": {
+      "error": "no lines found matching your request"
+    },
+    "Seepe": {
+      "error": "no lines found matching your request"
+    },
+    "Winkler": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1032,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "Capt LEPICK",
+        "crew_2": "LTJG WINKLER",
+        "event": "NTR4101",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    }
+  },
+  "2024-02-28": {
+    "Asher": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1040,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "LtCol MINICK",
+        "crew_2": "LTJG ASHER",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1035,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "Capt LEPICK",
+        "crew_2": "LTJG DOMLER",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1069,
+        "brief_time": 1630,
+        "takeoff_time": 2115,
+        "land_time": 2233,
+        "crew_1": "Maj CORBETT",
+        "crew_2": "LTJG FIGUEROA",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": "MB W/ROSS"
+      }
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1047,
+        "brief_time": 1730,
+        "takeoff_time": 1915,
+        "land_time": 2033,
+        "crew_1": "1stLt KENT",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": "MB W/SMITH"
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1046,
+        "brief_time": 1730,
+        "takeoff_time": 1915,
+        "land_time": 2033,
+        "crew_1": "LTJG MARKERT",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": "MB W/SMITH"
+      }
+    },
+    "Meier": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1037,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "LT JACKSON",
+        "crew_2": "1stLt MEIER",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1034,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "CIV FINCH",
+        "crew_2": "1stLt RODTS",
+        "event": "NTR4101",
+        "flight_time": "1.3",
+        "remark": "O/I"
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1068,
+        "brief_time": 1930,
+        "takeoff_time": 2115,
+        "land_time": 2233,
+        "crew_1": "CIV FINCH",
+        "crew_2": "1stLt RODTS",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": "RTB"
+      }
+    },
+    "Roser": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1045,
+        "brief_time": 1730,
+        "takeoff_time": 1915,
+        "land_time": 2033,
+        "crew_1": "Capt ROSER",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": "MB W/SMITH"
+      }
+    },
+    "Ross": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1036,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "Maj CORBETT",
+        "crew_2": "Capt ROSS",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": "MB W/FIGUEROA"
+      }
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "duty",
+        "duty": "AM SDO",
+        "crew": "LTJG SEEPE",
+        "sign_in": 630,
+        "sign_out": 1430
+      }
+    },
+    "Winkler": {
+      "line_0": {
+        "type": "duty",
+        "duty": "PM SDO",
+        "crew": "LTJG WINKLER",
+        "sign_in": 1430,
+        "sign_out": 2230
+      }
+    }
+  },
+  "2024-02-29": {
+    "Asher": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1000,
+        "takeoff_time": 1030,
+        "box_no": "810",
+        "crew_1": "CIV AUSBROOKS",
+        "crew_2": "LTJG ASHER",
+        "event": "FRM3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1037,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "LTJG ASHER",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1030,
+        "takeoff_time": 1100,
+        "box_no": "807",
+        "crew_1": "CIV HAMMES",
+        "crew_2": "LTJG DOMLER",
+        "event": "FRM3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1036,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "LTJG DOMLER",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1035,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "LTJG FIGUEROA",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Gray": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1034,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "CIV VOHDEN",
+        "crew_2": "LTJG GRAY",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": "CHASE NTR SOLOS"
+      }
+    },
+    "Kent": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1230,
+        "takeoff_time": 1300,
+        "box_no": "808",
+        "crew_1": "CIV ROMAN",
+        "crew_2": "1stLt KENT",
+        "event": "FRM3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1039,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "1stLt KENT",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1300,
+        "takeoff_time": 1330,
+        "box_no": "810",
+        "crew_1": "CIV POGUE",
+        "crew_2": "LTJG MARKERT",
+        "event": "FRM3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1040,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "LTJG MARKERT",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Meier": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1400,
+        "takeoff_time": 1430,
+        "box_no": "808",
+        "crew_1": "CIV GOODMAN",
+        "crew_2": "1stLt MEIER",
+        "event": "FRM3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1044,
+        "brief_time": 1730,
+        "takeoff_time": 1915,
+        "land_time": 2033,
+        "crew_1": "Capt LEPICK",
+        "crew_2": "1stLt MEIER",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": "CHASE NTR SOLO"
+      }
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1200,
+        "takeoff_time": 1230,
+        "box_no": "812",
+        "crew_1": "CIV CARRIER",
+        "crew_2": "1stLt RODTS",
+        "event": "FRM3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1046,
+        "brief_time": 1730,
+        "takeoff_time": 1915,
+        "land_time": 2033,
+        "crew_1": "1stLt RODTS",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Roser": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1330,
+        "takeoff_time": 1400,
+        "box_no": "812",
+        "crew_1": "CIV CAREY",
+        "crew_2": "Capt ROSER",
+        "event": "FRM3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1041,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "Capt ROSER",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Ross": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1130,
+        "takeoff_time": 1200,
+        "box_no": "810",
+        "crew_1": "CIV GOODMAN",
+        "crew_2": "Capt ROSS",
+        "event": "FRM3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1042,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "Capt ROSS",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1038,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "CIV FINCH",
+        "crew_2": "LTJG SEEPE",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": "CHASE NTR SOLOS"
+      }
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  },
+  "2024-03-01": {
+    "Asher": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 984,
+        "brief_time": 1230,
+        "takeoff_time": 1415,
+        "land_time": 1533,
+        "crew_1": "LCDR PANG",
+        "crew_2": "LTJG ASHER",
+        "event": "NTR4186",
+        "flight_time": "1.3",
+        "remark": "FSL; STAGE MEI"
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 998,
+        "brief_time": 1330,
+        "takeoff_time": 1515,
+        "land_time": 1633,
+        "crew_1": "LT PRUITT",
+        "crew_2": "LTJG DOMLER",
+        "event": "NTR4186",
+        "flight_time": "1.3",
+        "remark": "HS/SD; FSL MB W/RODTS"
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 993,
+        "brief_time": 1330,
+        "takeoff_time": 1445,
+        "land_time": 1603,
+        "crew_1": "LTJG ROSSIELLO",
+        "crew_2": "LTJG FIGUEROA",
+        "event": "NTR4186",
+        "flight_time": "1.3",
+        "remark": "CS/HS; FSL"
+      }
+    },
+    "Gray": {
+      "line_0": {
+        "type": "duty",
+        "duty": "DUTY DRIVER (ON CALL)",
+        "crew": "LTJG GRAY",
+        "sign_in": 0,
+        "sign_out": 2359
+      }
+    },
+    "Kent": {
+      "line_0": {
+        "type": "duty",
+        "duty": "RDO",
+        "crew": "1stLt KENT",
+        "sign_in": 930,
+        "sign_out": 1130
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1430,
+        "takeoff_time": 1500,
+        "box_no": "810",
+        "crew_1": "CIV POGUE",
+        "crew_2": "LTJG MARKERT",
+        "event": "FRM3102",
+        "remark": null
+      }
+    },
+    "Meier": {
+      "line_0": {
+        "type": "duty",
+        "duty": "PM SDO",
+        "crew": "1stLt MEIER",
+        "sign_in": 1115,
+        "sign_out": 1645
+      }
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 994,
+        "brief_time": 1330,
+        "takeoff_time": 1445,
+        "land_time": 1603,
+        "crew_1": "LT PRUITT",
+        "crew_2": "1stLt RODTS",
+        "event": "NTR4186",
+        "flight_time": "1.3",
+        "remark": "CS/HS; FSL"
+      }
+    },
+    "Roser": {
+      "line_0": {
+        "type": "duty",
+        "duty": "AM SDO",
+        "crew": "Capt ROSER",
+        "sign_in": 530,
+        "sign_out": 1115
+      }
+    },
+    "Ross": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 996,
+        "brief_time": 1330,
+        "takeoff_time": 1515,
+        "land_time": 1633,
+        "crew_1": "LTJG ROSSIELLO",
+        "crew_2": "Capt ROSS",
+        "event": "NTR4186",
+        "flight_time": "1.3",
+        "remark": "HS/SD; FSL MB W/FIGUEROA"
+      }
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1530,
+        "takeoff_time": 1600,
+        "box_no": "808",
+        "crew_1": "CIV SANDERS",
+        "crew_2": "LTJG SEEPE",
+        "event": "FRM3101",
+        "remark": null
+      }
+    },
+    "Winkler": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1600,
+        "takeoff_time": 1630,
+        "box_no": "811",
+        "crew_1": "CIV RAUENHORST",
+        "crew_2": "LTJG WINKLER",
+        "event": "FRM3101",
+        "remark": null
+      }
+    }
+  },
+  "2024-03-02": {
+    "Asher": {
+      "error": "no lines found matching your request"
+    },
+    "Domler": {
+      "error": "no lines found matching your request"
+    },
+    "Figueroa": {
+      "error": "no lines found matching your request"
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "error": "no lines found matching your request"
+    },
+    "Markert": {
+      "error": "no lines found matching your request"
+    },
+    "Meier": {
+      "error": "no lines found matching your request"
+    },
+    "Rodts": {
+      "error": "no lines found matching your request"
+    },
+    "Roser": {
+      "error": "no lines found matching your request"
+    },
+    "Ross": {
+      "error": "no lines found matching your request"
+    },
+    "Seepe": {
+      "error": "no lines found matching your request"
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  },
+  "2024-03-03": {
+    "Asher": {
+      "error": "no lines found matching your request"
+    },
+    "Domler": {
+      "error": "no lines found matching your request"
+    },
+    "Figueroa": {
+      "error": "no lines found matching your request"
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "error": "no lines found matching your request"
+    },
+    "Markert": {
+      "error": "no lines found matching your request"
+    },
+    "Meier": {
+      "error": "no lines found matching your request"
+    },
+    "Rodts": {
+      "error": "no lines found matching your request"
+    },
+    "Roser": {
+      "error": "no lines found matching your request"
+    },
+    "Ross": {
+      "error": "no lines found matching your request"
+    },
+    "Seepe": {
+      "error": "no lines found matching your request"
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  },
+  "2024-03-04": {
+    "Asher": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1035,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "LTJG ASHER",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1036,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "LTJG DOMLER",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1041,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "LTJG FIGUEROA",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Gray": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1034,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "LCDR THYBERG",
+        "crew_2": "LTJG GRAY",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": "CHASE NTR SOLOS"
+      }
+    },
+    "Kent": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1300,
+        "takeoff_time": 1330,
+        "box_no": "810",
+        "crew_1": "CIV SAYLOR",
+        "crew_2": "1stLt KENT",
+        "event": "FRM3102",
+        "remark": null
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1230,
+        "takeoff_time": 1300,
+        "box_no": "808",
+        "crew_1": "CIV SANDERS",
+        "crew_2": "LTJG MARKERT",
+        "event": "FRM3103",
+        "remark": null
+      }
+    },
+    "Meier": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 995,
+        "brief_time": 1300,
+        "takeoff_time": 1445,
+        "land_time": 1603,
+        "crew_1": "LCDR OBOYLE",
+        "crew_2": "1stLt MEIER",
+        "event": "NTR4186",
+        "flight_time": "1.3",
+        "remark": "FSL; MB W/SEEPE"
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1042,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "1stLt MEIER",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1040,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "1stLt RODTS",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Roser": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1400,
+        "takeoff_time": 1430,
+        "box_no": "808",
+        "crew_1": "CIV KNIGHT",
+        "crew_2": "Capt ROSER",
+        "event": "FRM3102",
+        "remark": null
+      }
+    },
+    "Ross": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1037,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "Capt ROSS",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1003,
+        "brief_time": 1300,
+        "takeoff_time": 1545,
+        "land_time": 1703,
+        "crew_1": "LCDR OBOYLE",
+        "crew_2": "LTJG SEEPE",
+        "event": "NTR4186",
+        "flight_time": "1.3",
+        "remark": "FSL; MB W/MEIER"
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1043,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "LTJG SEEPE",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Winkler": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1038,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "LT WALLACE",
+        "crew_2": "LTJG WINKLER",
+        "event": "NTR4102",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    }
+  },
+  "2024-03-05": {
+    "Asher": {
+      "line_0": {
+        "type": "duty",
+        "duty": "RDO",
+        "crew": "LTJG ASHER",
+        "sign_in": 1330,
+        "sign_out": 1645
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1800,
+        "takeoff_time": 1830,
+        "box_no": "812",
+        "crew_1": "CIV POGUE",
+        "crew_2": "LTJG DOMLER",
+        "event": "FRM3102",
+        "remark": null
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1300,
+        "takeoff_time": 1330,
+        "box_no": "810",
+        "crew_1": "CIV POGUE",
+        "crew_2": "LTJG FIGUEROA",
+        "event": "FRM3101",
+        "remark": null
+      }
+    },
+    "Gray": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1037,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "LTJG GRAY",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Kent": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1100,
+        "takeoff_time": 1130,
+        "box_no": "808",
+        "crew_1": "CIV SAYLOR",
+        "crew_2": "1stLt KENT",
+        "event": "FRM3103",
+        "remark": null
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1000,
+        "takeoff_time": 1030,
+        "box_no": "ITD-74M",
+        "crew_1": "LTJG MARKERT",
+        "crew_2": null,
+        "event": "FRM6101",
+        "remark": null
+      }
+    },
+    "Meier": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1034,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "1stLt MEIER",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 2030,
+        "takeoff_time": 2100,
+        "box_no": "808",
+        "crew_1": "CIV CAREY",
+        "crew_2": "1stLt RODTS",
+        "event": "FRM3102",
+        "remark": null
+      }
+    },
+    "Roser": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1200,
+        "takeoff_time": 1230,
+        "box_no": "812",
+        "crew_1": "CIV CARRIER",
+        "crew_2": "Capt ROSER",
+        "event": "FRM3103",
+        "remark": null
+      }
+    },
+    "Ross": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1830,
+        "takeoff_time": 1900,
+        "box_no": "808",
+        "crew_1": "CIV CAREY",
+        "crew_2": "Capt ROSS",
+        "event": "FRM3101",
+        "remark": null
+      }
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1033,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "LTJG SEEPE",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Winkler": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1036,
+        "brief_time": 1630,
+        "takeoff_time": 1815,
+        "land_time": 1933,
+        "crew_1": "LTJG WINKLER",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    }
+  },
+  "2024-03-06": {
+    "Asher": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1046,
+        "brief_time": 1730,
+        "takeoff_time": 1915,
+        "land_time": 2033,
+        "crew_1": "LTJG ASHER",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1030,
+        "takeoff_time": 1100,
+        "box_no": "812",
+        "crew_1": "CIV GIANAKOS",
+        "crew_2": "LTJG DOMLER",
+        "event": "FRM3103",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1047,
+        "brief_time": 1730,
+        "takeoff_time": 1915,
+        "land_time": 2033,
+        "crew_1": "LTJG DOMLER",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1100,
+        "takeoff_time": 1130,
+        "box_no": "808",
+        "crew_1": "CIV HANSCHKE",
+        "crew_2": "LTJG FIGUEROA",
+        "event": "FRM3102",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1040,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "LTJG FIGUEROA",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Gray": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1400,
+        "takeoff_time": 1430,
+        "box_no": "808",
+        "crew_1": "CIV CAREY",
+        "crew_2": "LTJG GRAY",
+        "event": "FRM3101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1045,
+        "brief_time": 1730,
+        "takeoff_time": 1915,
+        "land_time": 2033,
+        "crew_1": "LTJG GRAY",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Kent": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1100,
+        "takeoff_time": 1130,
+        "box_no": "ITD-72M",
+        "crew_1": "1stLt KENT",
+        "crew_2": null,
+        "event": "FRM6101",
+        "remark": null
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1400,
+        "takeoff_time": 1430,
+        "box_no": "ITD-72M",
+        "crew_1": "LTJG MARKERT",
+        "crew_2": null,
+        "event": "FRM6102",
+        "remark": null
+      }
+    },
+    "Meier": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1330,
+        "takeoff_time": 1400,
+        "box_no": "812",
+        "crew_1": "CIV YOSKOVICH",
+        "crew_2": "1stLt MEIER",
+        "event": "AN3102",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1043,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "1stLt MEIER",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1130,
+        "takeoff_time": 1200,
+        "box_no": "810",
+        "crew_1": "CIV ROMAN",
+        "crew_2": "1stLt RODTS",
+        "event": "FRM3103",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1041,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "1stLt RODTS",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Roser": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1100,
+        "takeoff_time": 1130,
+        "box_no": "ITD-72M",
+        "crew_1": "Capt ROSER",
+        "crew_2": null,
+        "event": "FRM6101",
+        "remark": null
+      }
+    },
+    "Ross": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1200,
+        "takeoff_time": 1230,
+        "box_no": "812",
+        "crew_1": "CIV EPPS",
+        "crew_2": "Capt ROSS",
+        "event": "FRM3103",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1048,
+        "brief_time": 1730,
+        "takeoff_time": 1915,
+        "land_time": 2033,
+        "crew_1": "Capt ROSS",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1000,
+        "takeoff_time": 1030,
+        "box_no": "810",
+        "crew_1": "CIV SANDERS",
+        "crew_2": "LTJG SEEPE",
+        "event": "FRM3102",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1042,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "LTJG SEEPE",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Winkler": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1039,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "LTJG WINKLER",
+        "crew_2": null,
+        "event": "NTR42S1",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    }
+  },
+  "2024-03-07": {
+    "Asher": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1000,
+        "takeoff_time": 1030,
+        "box_no": "810",
+        "crew_1": "CIV SANDERS",
+        "crew_2": "LTJG ASHER",
+        "event": "FRM3102",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1400,
+        "takeoff_time": 1430,
+        "box_no": "808",
+        "crew_1": "CIV KNIGHT",
+        "crew_2": "LTJG ASHER",
+        "event": "FRM3103",
+        "remark": null
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1000,
+        "takeoff_time": 1030,
+        "box_no": "ITD-72M",
+        "crew_1": "LTJG DOMLER",
+        "crew_2": null,
+        "event": "FRM6101",
+        "remark": null
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 930,
+        "takeoff_time": 1000,
+        "box_no": "808",
+        "crew_1": "CIV HEIMANN",
+        "crew_2": "LTJG FIGUEROA",
+        "event": "FRM3103",
+        "remark": null
+      }
+    },
+    "Gray": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1300,
+        "takeoff_time": 1330,
+        "box_no": "810",
+        "crew_1": "CIV STERLING",
+        "crew_2": "LTJG GRAY",
+        "event": "FRM3102",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1039,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "LTJG GRAY",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Kent": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 800,
+        "takeoff_time": 830,
+        "box_no": "ITD-74M",
+        "crew_1": "1stLt KENT",
+        "crew_2": null,
+        "event": "FRM6102",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1130,
+        "takeoff_time": 1200,
+        "box_no": "810",
+        "crew_1": "CIV RAUENHORST",
+        "crew_2": "1stLt KENT",
+        "event": "FRM2101",
+        "remark": null
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 900,
+        "takeoff_time": 930,
+        "box_no": "812",
+        "crew_1": "CIV RAUENHORST",
+        "crew_2": "LTJG MARKERT",
+        "event": "FRM2101",
+        "remark": null
+      }
+    },
+    "Meier": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1030,
+        "takeoff_time": 1100,
+        "box_no": "812",
+        "crew_1": "CIV CAREY",
+        "crew_2": "1stLt MEIER",
+        "event": "FRM3103",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1040,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "1stLt MEIER",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1000,
+        "takeoff_time": 1030,
+        "box_no": "ITD-72M",
+        "crew_1": "1stLt RODTS",
+        "crew_2": null,
+        "event": "FRM6101",
+        "remark": null
+      }
+    },
+    "Roser": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 800,
+        "takeoff_time": 830,
+        "box_no": "ITD-74M",
+        "crew_1": "Capt ROSER",
+        "crew_2": null,
+        "event": "FRM6102",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1200,
+        "takeoff_time": 1230,
+        "box_no": "812",
+        "crew_1": "CIV RICHARDSON",
+        "crew_2": "Capt ROSER",
+        "event": "FRM2101",
+        "remark": null
+      }
+    },
+    "Ross": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1000,
+        "takeoff_time": 1030,
+        "box_no": "ITD-72M",
+        "crew_1": "Capt ROSS",
+        "crew_2": null,
+        "event": "FRM6101",
+        "remark": null
+      }
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 1042,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "LTJG SEEPE",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    },
+    "Winkler": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1330,
+        "takeoff_time": 1400,
+        "box_no": "812",
+        "crew_1": "CIV CARRIER",
+        "crew_2": "LTJG WINKLER",
+        "event": "FRM3102",
+        "remark": null
+      },
+      "line_1": {
+        "type": "flight",
+        "line_no": 1041,
+        "brief_time": 1700,
+        "takeoff_time": 1845,
+        "land_time": 2003,
+        "crew_1": "LTJG WINKLER",
+        "crew_2": null,
+        "event": "NTR42S2",
+        "flight_time": "1.3",
+        "remark": null
+      }
+    }
+  },
+  "2024-03-08": {
+    "Asher": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 600,
+        "takeoff_time": 630,
+        "box_no": "ITD-72M",
+        "crew_1": "LTJG ASHER",
+        "crew_2": null,
+        "event": "FRM6102",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 630,
+        "takeoff_time": 700,
+        "box_no": "ITD-72M",
+        "crew_1": "LTJG ASHER",
+        "crew_2": null,
+        "event": "FRM6101",
+        "remark": null
+      }
+    },
+    "Domler": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 600,
+        "takeoff_time": 630,
+        "box_no": "ITD-74M",
+        "crew_1": "LTJG DOMLER",
+        "crew_2": null,
+        "event": "FRM6102",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 930,
+        "takeoff_time": 1000,
+        "box_no": "808",
+        "crew_1": "CIV YOSKOVICH",
+        "crew_2": "LTJG DOMLER",
+        "event": "FRM2101",
+        "remark": null
+      }
+    },
+    "Figueroa": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 600,
+        "takeoff_time": 630,
+        "box_no": "ITD-72M",
+        "crew_1": "LTJG FIGUEROA",
+        "crew_2": null,
+        "event": "FRM6101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 630,
+        "takeoff_time": 700,
+        "box_no": "ITD-72M",
+        "crew_1": "LTJG FIGUEROA",
+        "crew_2": null,
+        "event": "FRM6102",
+        "remark": null
+      }
+    },
+    "Gray": {
+      "error": "no lines found matching your request"
+    },
+    "Kent": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 979,
+        "brief_time": 1145,
+        "takeoff_time": 1345,
+        "land_time": 1503,
+        "crew_1": "LTJG ROSSIELLO",
+        "crew_2": "1stLt KENT",
+        "event": "FRM4101",
+        "flight_time": "1.3",
+        "remark": "2HR BRF"
+      }
+    },
+    "Markert": {
+      "line_0": {
+        "type": "flight",
+        "line_no": 929,
+        "brief_time": 715,
+        "takeoff_time": 915,
+        "land_time": 1033,
+        "crew_1": "LT WALLACE",
+        "crew_2": "LTJG MARKERT",
+        "event": "FRM4101",
+        "flight_time": "1.3",
+        "remark": "2 HR BRF"
+      }
+    },
+    "Meier": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1030,
+        "takeoff_time": 1100,
+        "box_no": "ITD-72M",
+        "crew_1": "1stLt MEIER",
+        "crew_2": null,
+        "event": "FRM6101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1030,
+        "takeoff_time": 1100,
+        "box_no": "ITD-72M",
+        "crew_1": "1stLt MEIER",
+        "crew_2": null,
+        "event": "FRM6102",
+        "remark": null
+      }
+    },
+    "Rodts": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 630,
+        "takeoff_time": 700,
+        "box_no": "ITD-74M",
+        "crew_1": "1stLt RODTS",
+        "crew_2": null,
+        "event": "FRM6102",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1130,
+        "takeoff_time": 1200,
+        "box_no": "807",
+        "crew_1": "CIV RAUENHORST",
+        "crew_2": "1stLt RODTS",
+        "event": "FRM2101",
+        "remark": null
+      }
+    },
+    "Roser": {
+      "line_0": {
+        "type": "duty",
+        "duty": "DUTY DRIVER (ON CALL)",
+        "crew": "Capt ROSER",
+        "sign_in": 0,
+        "sign_out": 2359
+      }
+    },
+    "Ross": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 630,
+        "takeoff_time": 700,
+        "box_no": "ITD-74M",
+        "crew_1": "Capt ROSS",
+        "crew_2": null,
+        "event": "FRM6102",
+        "remark": null
+      }
+    },
+    "Seepe": {
+      "line_0": {
+        "type": "simulator",
+        "brief_time": 1030,
+        "takeoff_time": 1100,
+        "box_no": "ITD-72M",
+        "crew_1": "LTJG SEEPE",
+        "crew_2": null,
+        "event": "FRM6101",
+        "remark": null
+      },
+      "line_1": {
+        "type": "simulator",
+        "brief_time": 1030,
+        "takeoff_time": 1100,
+        "box_no": "ITD-72M",
+        "crew_1": "LTJG SEEPE",
+        "crew_2": null,
+        "event": "FRM6102",
+        "remark": null
+      }
+    },
+    "Winkler": {
+      "error": "no lines found matching your request"
+    }
+  }
+}

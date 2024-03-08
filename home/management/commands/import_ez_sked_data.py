@@ -1,6 +1,8 @@
 import json
 from datetime import datetime
 from home.models import SNA, EzSkedEvent
+from home.scripts import *
+
 
 # Assuming jsonData contains the JSON data you provided
 from django.core.management.base import BaseCommand
@@ -14,35 +16,35 @@ class Command(BaseCommand):
         Function to handle the given options and create or update EzSkedEvent objects based on the provided JSON data.
         """
 
-        with open('ezsked_data.json') as f:
+        with open('ez_sked_data_2024-03-08.json') as f:
             data = f.read()
         jsonData = json.loads(data)
 
         for date, events in jsonData.items():
+            
+
             for sna_name, sna_events in events.items():
-                sna, created = SNA.objects.get_or_create(name=sna_name, rank="Rank")  # Replace "Rank" with the actual rank
                 
+                sna = SNA.objects.filter(name=sna_name)[0]           
+
+
+                existing_events = EzSkedEvent.objects.filter(date=date, sna=sna)
+                if existing_events:
+                    continue
                 for line, event_data in sna_events.items():
                     if "error" in line: 
                         continue
+                    event_type = event_data["type"]
+                  
+                    if event_type == "duty":
+                        event = create_duty_event(sna, event_data, date)
+                    elif event_type == "simulator":
+                        event = create_sim_event(sna, event_data, date)
+                    elif event_type == "flight":
+                        event = create_flight_event(sna, event_data, date)
                     else:
-                        event_date = date
-                        event_name = event_data["event"]
-                        
-                        # Check if an event with the same name and date already exists
-                        existing_event = EzSkedEvent.objects.filter(date=event_date, event_name=event_name).first()
-                        
-                        if existing_event is None:
-                            event = EzSkedEvent(
-                                date=event_date,
-                                event_name=event_name,
-                                sna=sna,
-                                event_type=event_data["type"],
-                                remarks=event_data["remark"] if event_data["remark"] is not None else "",
-                                brief_time=event_data["brief_time"],
-                                takeoff_time=event_data["takeoff_time"],
-                                land_time=0,  # You can set the land time as per your requirement
-                                crew_1 = event_data['crew_1'],
-                                crew_2 = event_data['crew_2']
-                            )
-                            event.save()
+                        print(f"{Exception}Unknown event type")
+                    event.save()
+
+        
+     

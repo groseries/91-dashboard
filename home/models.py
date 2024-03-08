@@ -21,7 +21,7 @@ class EzSkedEvent(models.Model):
     remarks = models.CharField(max_length=255, default=None, null=True, blank=True)
     
     brief_time = models.TimeField(default=None)
-    takeoff_time = models.TimeField(default=None)
+    takeoff_time = models.TimeField(default=None, null=True, blank=True)
     land_time = models.TimeField(default=None)
 
     crew_1 = models.CharField(max_length=255, default=None)
