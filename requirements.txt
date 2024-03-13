@@ -11,6 +11,6 @@ gunicorn==21.2.0
 
 pytz==2023.4
 requests
-
+tfr_scraper
 # psycopg2-binary
 # mysqlclient
