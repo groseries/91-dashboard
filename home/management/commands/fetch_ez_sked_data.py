@@ -29,7 +29,7 @@ class Command(BaseCommand):
         data_dict = {}
 
 
-        start_date = datetime(2024, 2, 13)
+        start_date = datetime(2024, 3, 7)
         end_date = datetime.now()
 
 

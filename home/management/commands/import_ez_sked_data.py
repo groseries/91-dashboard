@@ -16,7 +16,7 @@ class Command(BaseCommand):
         Function to handle the given options and create or update EzSkedEvent objects based on the provided JSON data.
         """
 
-        with open('ez_sked_data_2024-03-08.json') as f:
+        with open('ez_sked_data.json') as f:
             data = f.read()
         jsonData = json.loads(data)
 

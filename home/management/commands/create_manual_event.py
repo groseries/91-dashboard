@@ -14,8 +14,8 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
 
         ## Edit these as required
-        date = '2024-02-14'
-        sna = SNA.objects.filter(name="Domler")[0]           
+        date = '2024-1-27'
+        sna = SNA.objects.filter(name="Gray")[0]           
         sim =  {
                 "type": "simulator",
                 "brief_time":1930,
@@ -44,10 +44,10 @@ class Command(BaseCommand):
 
         duty = {
             "type": "duty",
-            "duty": "IWO",
-            "crew": "LTJG ASHER",
-            "sign_in": 1800,
-            "sign_out": 600
+            "duty": "DUTY DRIVER (ON CALL)",
+            "crew": "LTJG GRAY",
+            "sign_in": 700,
+            "sign_out": 1700
         }
 
         
@@ -59,7 +59,7 @@ class Command(BaseCommand):
         #     print(f"event {existing_events} already exists")
 
         # else:
-        event = create_sim_event(sna,sim, date)
+        event = create_duty_event(sna, duty, date)
         event.save()
         created_event = event
         print(f"Event created with id: {created_event.id}")
