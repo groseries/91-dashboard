@@ -1,9 +1,9 @@
 services:
   - type: web
     name: 91-dashboard
-    plan: starter
+    plan: free
     env: python
-    region: frankfurt  # region should be same as your database region.
+    region: ohio  # region should be same as your database region.
     buildCommand: "./build.sh"
     startCommand: "gunicorn core.wsgi:application"
     envVars:
