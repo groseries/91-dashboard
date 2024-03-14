@@ -11,10 +11,12 @@ services:
     env: python
     region: ohio  # region should be same as your database region.
     buildCommand: "./build.sh"
-    startCommand: "gunicorn core.wsgi:application"
+    startCommand: "python -m gunicorn core.wsgi:application -k uvicorn.workers.UvicornWorkergunicorn"
     envVars:
     - key: DATABASE_URL
-      value: "postgres://berry_u9b9_user:BFmQzE7CR5hMtIm3mqAO8ssnObq5l5tP@dpg-cnp3ch0l6cac73a5ft4g-a/berry_u9b9"
+      fromDatabase:
+          name: berry_u9b9
+          property: postgres://berry_u9b9_user:BFmQzE7CR5hMtIm3mqAO8ssnObq5l5tP@dpg-cnp3ch0l6cac73a5ft4g-a/berry_u9b9
     - key: DEBUG
       value: False
     - key: SECRET_KEY
