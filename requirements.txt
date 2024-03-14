@@ -9,7 +9,7 @@ click==8.1.7
 defusedxml==0.7.1
 dj-database-url==2.1.0
 Django==4.1.12
-django-admin-volt==1.0.10
+django-admin-volt==1.0.9
 gunicorn==21.2.0
 h11==0.14.0
 html-table-parser-python3==0.3.1
