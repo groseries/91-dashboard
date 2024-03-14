@@ -1,3 +1,9 @@
+databases:
+  - name: berry
+    plan: free
+    databaseName: berry
+    user: 
+
 services:
   - type: web
     name: 91-dashboard
@@ -7,9 +13,11 @@ services:
     buildCommand: "./build.sh"
     startCommand: "gunicorn core.wsgi:application"
     envVars:
-      - key: DEBUG
-        value: False
-      - key: SECRET_KEY
-        generateValue: true
-      - key: WEB_CONCURRENCY
-        value: 4
+    - key: DATABASE_URL
+      value: "postgres://berry_u9b9_user:BFmQzE7CR5hMtIm3mqAO8ssnObq5l5tP@dpg-cnp3ch0l6cac73a5ft4g-a.ohio-postgres.render.com/berry_u9b9"
+    - key: DEBUG
+      value: False
+    - key: SECRET_KEY
+      generateValue: true
+    - key: WEB_CONCURRENCY
+      value: 4

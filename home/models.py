@@ -72,15 +72,20 @@ class SNA(models.Model):
     def num_weekdays_without_events(self):
         start_date = date(2023, 10, 2)  # Assuming October 2, 2023
         end_date = date.today()
-        total_weekdays = sum(1 for day in range((end_date - start_date).days + 1) if (start_date + timedelta(days=day)).weekday() < 5)
 
-        weekday_events = (
+        # Query your database for the distinct event dates within the date range
+        event_dates = EzSkedEvent.objects.filter(date__range=[start_date, end_date]).values_list('date', flat=True).distinct()
+
+        # Filter out weekends from the list of event dates
+        num_weekday_events = len([date for date in event_dates if date.weekday() < 5])
+
+        num_sna_weekday_events = (
             self.ezskedevent_set.filter(date__range=[start_date, end_date])
             .exclude(date__week_day__in=[6, 7])  # Exclude weekends
             .values_list('date__week_day', flat=True)
-        )
+        ).count()
         
-        weekdays_without_events = total_weekdays - weekday_events.count()-self.num_duties
+        weekdays_without_events = num_weekday_events -num_sna_weekday_events
 
 
         return weekdays_without_events

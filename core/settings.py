@@ -14,6 +14,12 @@ import os, random, string
 from pathlib import Path
 from dotenv import load_dotenv
 
+import dj_database_url
+from decouple import config
+
+
+
+
 load_dotenv()  # take environment variables from .env.
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -94,24 +100,57 @@ DB_HOST     = os.getenv('DB_HOST'     , None)
 DB_PORT     = os.getenv('DB_PORT'     , None)
 DB_NAME     = os.getenv('DB_NAME'     , None)
 
-if DB_ENGINE and DB_NAME and DB_USERNAME:
-    DATABASES = { 
-      'default': {
-        'ENGINE'  : 'django.db.backends.' + DB_ENGINE, 
-        'NAME'    : DB_NAME,
-        'USER'    : DB_USERNAME,
-        'PASSWORD': DB_PASS,
-        'HOST'    : DB_HOST,
-        'PORT'    : DB_PORT,
-        }, 
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'db.sqlite3',
-        }
-    }
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default='postgres://berry_u9b9_user:BFmQzE7CR5hMtIm3mqAO8ssnObq5l5tP@dpg-cnp3ch0l6cac73a5ft4g-a.ohio-postgres.render.com/berry_u9b9',
+        conn_max_age=600
+    )
+}
+
+
+
+# # Replace this with your PostgreSQL connection string
+# DATABASE_URL = config('postgres://berry_u9b9_user:BFmQzE7CR5hMtIm3mqAO8ssnObq5l5tP@dpg-cnp3ch0l6cac73a5ft4g-a.ohio-postgres.render.com/berry_u9b9')  # This should be set in your environment variables
+
+# # Default configuration for SQLite
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': config('DB_NAME', default='db.sqlite3'),
+#     }
+# }
+
+# # Update the configuration for production using PostgreSQL
+# db_from_env = dj_database_url.config(default=DATABASE_URL, conn_max_age=600)
+# DATABASES['default'].update(db_from_env)
+
+
+
+# if 'DATABASE_URL' in os.environ:
+#     DATABASES['default'] = dj_database_url.config(
+#         conn_max_age=500,
+#         conn_health_checks=True,
+#     )
+
+# if DB_ENGINE and DB_NAME and DB_USERNAME:
+#     DATABASES = { 
+#       'default': {
+#         'ENGINE'  : 'django.db.backends.' + DB_ENGINE, 
+#         'NAME'    : DB_NAME,
+#         'USER'    : DB_USERNAME,
+#         'PASSWORD': DB_PASS,
+#         'HOST'    : DB_HOST,
+#         'PORT'    : DB_PORT,
+#         }, 
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': 'db.sqlite3',
+#         }
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -150,6 +189,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+if not DEBUG:
+    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
+    # and renames the files with unique names for each version to support long-term caching
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #if not DEBUG:
 #    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
