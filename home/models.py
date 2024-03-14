@@ -23,7 +23,7 @@ class SNA(models.Model):
 
     @property
     def num_early_events(self):
-        return self.ezskedevent_set.filter(brief_time__hour__lt=6).count()
+        return self.ezskedevent_set.exclude(event_type='duty').filter(brief_time__hour__lt=6).count()
     
     @property
     def num_duties(self):
