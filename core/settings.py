@@ -103,10 +103,11 @@ DB_NAME     = os.getenv('DB_NAME'     , None)
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "OPTIONS": {
-            "service": "my_service",
-            "passfile": ".my_pgpass",
-        },
+        'NAME': 'berry_u9b9',
+        'USER': 'berry_u9b9_user',  # User will be picked up from the service definition
+        'PASSWORD': 'BFmQzE7CR5hMtIm3mqAO8ssnObq5l5tP',  # Password will be picked up from the service definition
+        'HOST': 'dpg-cnp3ch0l6cac73a5ft4g-a.ohio-postgres.render.com',  # Host will be picked up from the service definition
+        'PORT': '5432',  # Port will be picked up from the service definition
     }
 }
 

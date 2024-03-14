@@ -18,3 +18,9 @@
 2024-03-14 09:53:32.727 CDT [52432] FATAL:  role "username" does not exist
 2024-03-14 09:53:51.188 CDT [52479] FATAL:  role "username" does not exist
 2024-03-14 09:53:56.461 CDT [52494] FATAL:  role "username" does not exist
+2024-03-14 10:02:42.167 CDT [52875] FATAL:  database "my_service" does not exist
+2024-03-14 10:02:47.099 CDT [52879] FATAL:  database "berry_" does not exist
+2024-03-14 10:02:50.078 CDT [52882] FATAL:  database "berry_u9b9" does not exist
+2024-03-14 10:02:57.016 CDT [52890] FATAL:  role "berry_u9" does not exist
+2024-03-14 10:03:00.032 CDT [52892] FATAL:  role "berry_u9b9_user" does not exist
+2024-03-14 10:03:06.072 CDT [52898] FATAL:  role "berry_u9b9_user" does not exist

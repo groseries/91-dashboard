@@ -4,6 +4,8 @@
 /dist/
 /.idea
 /docs/_build/
+/postgres_91/
+postgres_91/pg_stat_tmp/
 /node_modules/
 build/
 env
@@ -13,3 +15,7 @@ env
 *.sqlite*
 
 .env
+postgres_91/pg_stat_tmp/db_0.stat
+.gitignore
+postgres_91/pg_stat_tmp/db_16384.stat
+postgres_91/pg_stat_tmp/global.stat
