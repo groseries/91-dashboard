@@ -19,3 +19,7 @@ postgres_91/pg_stat_tmp/db_0.stat
 .gitignore
 postgres_91/pg_stat_tmp/db_16384.stat
 postgres_91/pg_stat_tmp/global.stat
+postgres_91/pg_stat_tmp/db_0.stat
+.gitignore
+postgres_91/pg_stat_tmp/db_16384.stat
+postgres_91/pg_stat_tmp/global.stat
