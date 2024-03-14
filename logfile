@@ -1,0 +1,16 @@
+2024-03-14 09:30:31.114 CDT [51118] LOG:  starting PostgreSQL 14.11 (Homebrew) on aarch64-apple-darwin23.2.0, compiled by Apple clang version 15.0.0 (clang-1500.1.0.2.5), 64-bit
+2024-03-14 09:30:31.115 CDT [51118] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-03-14 09:30:31.115 CDT [51118] LOG:  listening on IPv6 address "::1", port 5432
+2024-03-14 09:30:31.116 CDT [51118] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-03-14 09:30:31.117 CDT [51119] LOG:  database system was shut down at 2024-03-14 09:30:18 CDT
+2024-03-14 09:30:31.119 CDT [51118] LOG:  database system is ready to accept connections
+2024-03-14 09:31:07.844 CDT [51173] FATAL:  database "jig" does not exist
+2024-03-14 09:31:18.000 CDT [51187] FATAL:  role "ALL" does not exist
+2024-03-14 09:31:31.364 CDT [51201] FATAL:  database "jig" does not exist
+2024-03-14 09:36:08.083 CDT [51494] FATAL:  database "jig" does not exist
+2024-03-14 09:42:36.614 CDT [51827] FATAL:  role "username" does not exist
+2024-03-14 09:44:30.921 CDT [51905] FATAL:  role "username" does not exist
+2024-03-14 09:44:44.233 CDT [51929] FATAL:  role "username" does not exist
+2024-03-14 09:45:09.759 CDT [51955] FATAL:  role "username" does not exist
+2024-03-14 09:46:26.054 CDT [51999] FATAL:  role "username" does not exist
+2024-03-14 09:46:36.198 CDT [52018] FATAL:  role "username" does not exist
