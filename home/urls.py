@@ -8,5 +8,6 @@ urlpatterns = [
     path('schedule',views.Schedule.as_view(), name="schedule"),
     path('class_schedule',views.ClassSchedule.as_view(), name="class_schedule"),
     path('stats', views.ClassStats.as_view(), name="stats"),
+    path('slideshow', views.google_photos_slideshow, name="slideshow"),
 
 ]

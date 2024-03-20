@@ -67,6 +67,19 @@
         </a>
       </li>
 
+      <li class="nav-item {% if 'dashboard' in segment %}active{% endif %}" style="display: flex; align-items: center;">
+        {% if request.user.is_superuser %}
+        <a href="{% url 'admin:index' %}" class="nav-link">
+        {% else %}
+        <a href="{% url 'slideshow' %}" class="nav-link">
+        {% endif %}
+          <span class="sidebar-icon" style="flex-shrink: 0; margin-right: 10px;">
+            <i class="fa-solid fa-camera-retro" style="font-size: 1.25rem; color: currentColor; vertical-align: middle;"></i>
+          </span>
+          <span class="sidebar-text">91 Kings and Queen</span>
+        </a>
+      </li>
+
     
 
       <li class="nav-item {% if 'dashboard' in segment %}active{% endif %}" style="display: flex; align-items: baseline;">
@@ -236,6 +249,8 @@
           <span class="sidebar-text">Shortcut Links</span>
         </a>
       </li>
+
+      
 
 
       {% endif %}
