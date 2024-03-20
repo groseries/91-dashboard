@@ -178,7 +178,8 @@ class ClassStats(View):
     template_name = "class_stats_page.html"
 
     def get_context_data(self, request, **kwargs):
-        
+        # TODO: Backseat driver: most trunks; No rest for the weary: shortest turn (average time between events on consecutive weekdays); Most O/Is: check remarks
+        # TODO: add tiles for Head of the flock, backseat driver, no rest for the weary, etc
 
         # Query all SNAs
         all_snas = SNA.objects.all()
@@ -199,6 +200,8 @@ class ClassStats(View):
             reverse=True
         )
         weekdays_without_events_ranking = sorted(all_snas, key=lambda x: x.num_weekdays_without_events, reverse=True)
+        # trunk_events_ranking = sorted(all_snas, key=lambda x: x.trunk_events_count, reverse=True)
+
 
         # Include the number of events as a tuple for each SNA in the ranking lists
         weekend_events_ranking_with_count = [(sna, sna.num_weekend_events) for sna in weekend_events_ranking]
@@ -212,6 +215,7 @@ class ClassStats(View):
         snas_with_latest_scheduled_event = [
             (sna, sna.latest_completed_event.event_name) for sna in latest_scheduled_event_ranking
         ]
+        # trunk_events_ranking_with_count = [(sna, sna.trunk_events_count) for sna in trunk_events_ranking]
 
 
 
@@ -233,99 +237,18 @@ class ClassStats(View):
 
         return context
 
-  
-        # snas_with_most_weekend_events = SNA.objects.annotate(
-        #     num_weekend_events=Sum(
-        #         Case(
-        #             When(ezskedevent__date__week_day__in=[6, 7], then=1),
-        #             default=Value(0),
-        #             output_field=IntegerField()
-        #         ),
-        #         default = 0,
-        #     )
-        # ).values('name', 'num_weekend_events').order_by('-num_weekend_events')[:1]
-
-        # for result in snas_with_most_weekend_events:
-        #     print(f"SNA Name: {result['name']}, Number of Weekend Events: {result['num_weekend_events']}")
-
-        # Iterate over the query results and print the SNA name and the number of weekend events
-        # for rank, result in enumerate(snas_with_most_weekend_events, start=1):
-        #     print(f"Rank {rank}: SNA Name: {result['name']}, Number of Late Events: {result['num_late_events']}")
-
-
-        
-        # target_time = 6  # Replace with the specific time in the format "HH:MM"
-
-        # # Query for SNA with the most early events (before target time AM) and access the name and number of early events
-        # early_bird = (
-        #     SNA.objects.filter(ezskedevent__brief_time__hour__lt=target_time)  # Filter events before 9 AM
-        #     .values('name')  # Select the SNA name
-        #     .annotate(num_early_events=Count('ezskedevent'))  # Count the number of early events for each SNA
-        #     .order_by('-num_early_events')[:1]
-        # )
-        # # Iterate over the query results and print the SNA name and the number of early events
-        # for result in early_bird:
-        #     print(f"SNA Name: {result['name']}, Number of Early Events: {result['num_early_events']}")
-
-        # early_bird_rankings = (
-        #     SNA.objects.filter(ezskedevent__brief_time__hour__lt=target_time)  # Filter events before 9 AM
-        #     .values('name')  # Select the SNA name
-        #     .annotate(num_early_events=Count('ezskedevent'))  # Count the number of early events for each SNA
-        #     .order_by('-num_early_events')  # Order by the number of early events in descending order
-        # )
-        # # Iterate over the query results and print the ranking of SNAs based on the number of early events
-        # for rank, result in enumerate(early_bird_rankings, start=1):
-        #     print(f"Rank {rank}: SNA Name: {result['name']}, Number of Early Events: {result['num_early_events']}")
-
-
-        # # Query for SNAs with the most events beginning after 8 PM
-        # target_time = 19
-        # # Query for SNA with the most early events (before target time AM) and access the name and number of early events
-        # night_owl = (
-        #     SNA.objects.filter(ezskedevent__brief_time__hour__gt=target_time)  # Filter events before 9 AM
-        #     .values('name')  # Select the SNA name
-        #     .annotate(num_late_events=Count('ezskedevent'))  # Count the number of early events for each SNA
-        #     .order_by('-num_late_events')[:1]
-        # )
-        # # Iterate over the query results and print the SNA name and the number of early events
-        # for result in night_owl:
-        #     print(f"SNA Name: {result['name']}, Number of Late Events: {result['num_late_events']}")
-
-        # ranking_of_snas_after_8pm = (
-        #     SNA.objects.filter(ezskedevent__brief_time__hour__gt=target_time)  # Filter events after 8 PM
-        #     .values('name')  # Select the SNA name
-        #     .annotate(num_late_events=Count('ezskedevent'))  # Count the number of late events for each SNA
-        #     .order_by('-num_late_events')  # Order by the number of late events in descending order
-        # )
-
-        # # Iterate over the query results and print the ranking of SNAs based on the number of events after 8 PM
-        # for rank, result in enumerate(ranking_of_snas_after_8pm, start=1):
-        #     print(f"Rank {rank}: SNA Name: {result['name']}, Number of Late Events: {result['num_late_events']}")
-
-
-
-
-        # # Query for SNAs with the most events on weekend days (Saturday and Sunday)
-        # snas_with_most_weekend_events = SNA.objects.annotate(
-        #     num_weekend_events=Count(
-        #         Case(
-        #             When(ezskedevent__date__week_day__in=[6, 7], then=1),
-        #             default=Value(0),
-        #             output_field=IntegerField()
-        #         )
-        #     )
-        # ).values('name').order_by('-num_weekend_events')[:1]
-
-        # for result in snas_with_most_weekend_events:
-        #     print(f"SNA Name: {result['name']}, Number of Weekend Events: {result.num_weekend_events}")
-
-        # # Iterate over the query results and print the SNA name and the number of weekend events
-        # for rank, result in enumerate(snas_with_most_weekend_events, start=1):
-        #     print(f"Rank {rank}: SNA Name: {result['name']}, Number of Late Events: {result['num_late_events']}")
-            
-        return context
-
     def get(self, request, *args, **kwargs):
             context = self.get_context_data(request, **kwargs)
             return render(request, self.template_name, context)
 
+
+def google_photos_slideshow(request):
+    # Replace the URL below with the shareable link of your Google Photos album
+    album_url = "https://photos.app.goo.gl/SCJhMV3CTfWrTcNK6"
+    
+    # Pass the album URL to the template
+    context = {
+        'album_url': album_url
+    }
+    
+    return render(request, 'slideshow.html', context)
