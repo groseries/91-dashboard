@@ -231,7 +231,7 @@ class ClassStats(View):
                 "backseat_driver":trunk_events_ranking_with_count[0],
                 "no_rest_for_the_weary":average_time_between_events_ranking_with_count[0],
                 "repeat_offender":duplicate_event_names_ranking_with_count[0],
-                "data": zip(["Unofficial Onwings", "Early Bird","Night Owl","Most Weekdays Off", "Duties","Repeaters/Cancelers", "Head of the Flock", "Most (Scheduled) Trunks", "Shortest Average Turnaround"],
+                "data": zip(["Unofficial Onwings", "Early Bird","Night Owl","Most Weekdays Off", "Duties","Repeaters/Cancelers", "Head of the Flock", "Most (Scheduled) Trunks", "Shortest Average Turnaround Between Consecutive Events"],
                             [unofficial_onwings, early_events_ranking_with_count, late_events_ranking_with_count, weekdays_without_events_ranking_with_count, duties_ranking_with_count,
                             duplicate_event_names_ranking_with_count, snas_with_latest_scheduled_event, trunk_events_ranking_with_count, average_time_between_events_ranking_with_count]),
             
