@@ -26,3 +26,10 @@ def split(value, key):
         Returns the value turned into a list.
     """
     return value.split(key)
+
+
+@register.filter
+def timedelta_to_hours_minutes(td):
+    hours, remainder = divmod(td.seconds, 3600)
+    minutes, _ = divmod(remainder, 60)
+    return "{:02}:{:02}".format(hours, minutes)

@@ -7,6 +7,11 @@
 <div class="container mr-4">
     <div class="row justify-content-between">
         <div class="col-md-3 align-items-stretch">
+            {% include 'head_of_flock_card.html' with data=head_of_flock %}
+        </br>
+
+        </div>
+        <div class="col-md-3 align-items-stretch">
             {% include 'early_bird_card.html' with data=early_bird %}
         </br>
         </div>
@@ -26,6 +31,25 @@
         </br>
 
         </div>
+
+        <div class="col-md-3 align-items-stretch">
+            {% include 'back_seat_driver_card.html' with data=backseat_driver %}
+        </br>
+
+        </div>
+
+        <div class="col-md-3 align-items-stretch">
+            {% include 'no_rest_for_weary_card.html' with data=no_rest_for_the_weary %}
+        </br>
+
+        </div>
+        <div class="col-md-3 align-items-stretch">
+            {% include 'repeat_offender_card.html' with data=repeat_offender %}
+        </br>
+
+        </div>
+
+
     </div>
 </div>
 

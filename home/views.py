@@ -188,11 +188,11 @@ class ClassStats(View):
         # self.calculate_properties(all_snas)
 
         # Sort SNAs by the desired properties
-        weekend_events_ranking = sorted(all_snas, key=lambda x: x.num_weekend_events, reverse=True)
+        # weekend_events_ranking = sorted(all_snas, key=lambda x: x.num_weekend_events, reverse=True)
         late_events_ranking = sorted(all_snas, key=lambda x: x.num_late_events, reverse=True)
         early_events_ranking = sorted(all_snas, key=lambda x: x.num_early_events, reverse=True)
         duties_ranking = sorted(all_snas, key=lambda x: x.num_duties, reverse=True)
-        unique_events_ranking = sorted(all_snas, key=lambda x: x.num_unique_events, reverse=True)
+        # unique_events_ranking = sorted(all_snas, key=lambda x: x.num_unique_events, reverse=True)
         duplicate_event_names_ranking = sorted(all_snas, key=lambda x: x.num_duplicate_event_names, reverse=True)
         latest_scheduled_event_ranking = sorted_snas = sorted(
             all_snas,
@@ -201,11 +201,11 @@ class ClassStats(View):
         )
         weekdays_without_events_ranking = sorted(all_snas, key=lambda x: x.num_weekdays_without_events, reverse=True)
         trunk_events_ranking = sorted(all_snas, key=lambda x: x.trunk_events_count, reverse=True)
-        average_time_between_events_ranking = sorted(all_snas, key=lambda x: x.average_time_between_consecutive_events, reverse=True)
-        num_consecutive_events_under_13_hours_ranking = sorted(all_snas, key=lambda x: x.num_consecutive_events_under_13_hours, reverse=True)
+        average_time_between_events_ranking = sorted(all_snas, key=lambda x: x.average_time_between_consecutive_events, reverse=False)
+        # num_consecutive_events_under_13_hours_ranking = sorted(all_snas, key=lambda x: x.num_consecutive_events_under_13_hours, reverse=True)
 
         # Include the number of events as a tuple for each SNA in the ranking lists
-        weekend_events_ranking_with_count = [(sna, sna.num_weekend_events) for sna in weekend_events_ranking]
+        # weekend_events_ranking_with_count = [(sna, sna.num_weekend_events) for sna in weekend_events_ranking]
         weekdays_without_events_ranking_with_count = [(sna, sna.num_weekdays_without_events) for sna in weekdays_without_events_ranking]
         late_events_ranking_with_count = [(sna, sna.num_late_events) for sna in late_events_ranking]
         early_events_ranking_with_count = [(sna, sna.num_early_events) for sna in early_events_ranking]
@@ -218,18 +218,20 @@ class ClassStats(View):
         ]
         trunk_events_ranking_with_count = [(sna, sna.trunk_events_count) for sna in trunk_events_ranking]
         average_time_between_events_ranking_with_count = [(sna, sna.average_time_between_consecutive_events) for sna in average_time_between_events_ranking]
-        num_consecutive_events_under_13_hours_ranking_with_count = [(sna, sna.num_consecutive_events_under_13_hours) for sna in num_consecutive_events_under_13_hours_ranking]
+        # num_consecutive_events_under_13_hours_ranking_with_count = [(sna, sna.num_consecutive_events_under_13_hours) for sna in num_consecutive_events_under_13_hours_ranking]
 
 
       
         context = {
+                "head_of_flock":snas_with_latest_scheduled_event[0],
                 "early_bird":early_events_ranking_with_count[0],
                 "night_owl":late_events_ranking_with_count[0],
                 "servant_leader": duties_ranking_with_count[0],
                 "part_time_sna":weekdays_without_events_ranking_with_count[0],
                 "backseat_driver":trunk_events_ranking_with_count[0],
                 "no_rest_for_the_weary":average_time_between_events_ranking_with_count[0],
-                "data": zip(["Unofficial Onwings", "Early Bird","Night Owl","Most Weekdays Off", "Duties","Repeaters/Cancelers", "Head of the Flock", "Most Trunks", "Shortest Average Turnaround"],
+                "repeat_offender":duplicate_event_names_ranking_with_count[0],
+                "data": zip(["Unofficial Onwings", "Early Bird","Night Owl","Most Weekdays Off", "Duties","Repeaters/Cancelers", "Head of the Flock", "Most (Scheduled) Trunks", "Shortest Average Turnaround"],
                             [unofficial_onwings, early_events_ranking_with_count, late_events_ranking_with_count, weekdays_without_events_ranking_with_count, duties_ranking_with_count,
                             duplicate_event_names_ranking_with_count, snas_with_latest_scheduled_event, trunk_events_ranking_with_count, average_time_between_events_ranking_with_count]),
             
