@@ -200,8 +200,9 @@ class ClassStats(View):
             reverse=True
         )
         weekdays_without_events_ranking = sorted(all_snas, key=lambda x: x.num_weekdays_without_events, reverse=True)
-        # trunk_events_ranking = sorted(all_snas, key=lambda x: x.trunk_events_count, reverse=True)
-
+        trunk_events_ranking = sorted(all_snas, key=lambda x: x.trunk_events_count, reverse=True)
+        average_time_between_events_ranking = sorted(all_snas, key=lambda x: x.average_time_between_consecutive_events, reverse=True)
+        num_consecutive_events_under_13_hours_ranking = sorted(all_snas, key=lambda x: x.num_consecutive_events_under_13_hours, reverse=True)
 
         # Include the number of events as a tuple for each SNA in the ranking lists
         weekend_events_ranking_with_count = [(sna, sna.num_weekend_events) for sna in weekend_events_ranking]
@@ -215,9 +216,9 @@ class ClassStats(View):
         snas_with_latest_scheduled_event = [
             (sna, sna.latest_completed_event.event_name) for sna in latest_scheduled_event_ranking
         ]
-        # trunk_events_ranking_with_count = [(sna, sna.trunk_events_count) for sna in trunk_events_ranking]
-
-
+        trunk_events_ranking_with_count = [(sna, sna.trunk_events_count) for sna in trunk_events_ranking]
+        average_time_between_events_ranking_with_count = [(sna, sna.average_time_between_consecutive_events) for sna in average_time_between_events_ranking]
+        num_consecutive_events_under_13_hours_ranking_with_count = [(sna, sna.num_consecutive_events_under_13_hours) for sna in num_consecutive_events_under_13_hours_ranking]
 
 
       
@@ -226,9 +227,11 @@ class ClassStats(View):
                 "night_owl":late_events_ranking_with_count[0],
                 "servant_leader": duties_ranking_with_count[0],
                 "part_time_sna":weekdays_without_events_ranking_with_count[0],
-                "data": zip(["Unofficial Onwings", "Early Bird","Night Owl","Most Weekdays Off", "Duties","Repeaters/Cancelers", "Head of the Flock"],
+                "backseat_driver":trunk_events_ranking_with_count[0],
+                "no_rest_for_the_weary":average_time_between_events_ranking_with_count[0],
+                "data": zip(["Unofficial Onwings", "Early Bird","Night Owl","Most Weekdays Off", "Duties","Repeaters/Cancelers", "Head of the Flock", "Most Trunks", "Shortest Average Turnaround"],
                             [unofficial_onwings, early_events_ranking_with_count, late_events_ranking_with_count, weekdays_without_events_ranking_with_count, duties_ranking_with_count,
-                            duplicate_event_names_ranking_with_count, snas_with_latest_scheduled_event]),
+                            duplicate_event_names_ranking_with_count, snas_with_latest_scheduled_event, trunk_events_ranking_with_count, average_time_between_events_ranking_with_count]),
             
             # 'weekend_events_ranking': weekend_events_ranking_with_count, This seems like it is too high
             # 'unique_events_ranking': unique_events_ranking_with_count,

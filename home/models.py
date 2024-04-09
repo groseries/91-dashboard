@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 from django.db.models import Count
 from collections import Counter
 
@@ -67,6 +67,60 @@ class SNA(models.Model):
         latest_completed_event = events.first()
 
         return latest_completed_event
+
+    @property
+    def trunk_events_count(self):
+        # Count the number of events with "Lead" in the name, ignoring case
+        return self.ezskedevent_set.filter(event_name__icontains='lead').count()
+
+    @property
+    def average_time_between_consecutive_events(self):
+        # Get all events associated with the SNA
+        events = self.ezskedevent_set.all().order_by('date')
+
+        # Initialize variables
+        total_time_difference = timedelta()
+        consecutive_event_count = 0
+
+        # Iterate over each event in the list
+        for i in range(len(events) - 1):
+            current_event = events[i]
+            next_event = events[i + 1]
+
+            # Check if the next event is scheduled for the next day
+            if next_event.date - current_event.date == timedelta(days=1):
+                # Calculate time difference between current event's land time and next event's brief time
+                time_difference = datetime.combine(next_event.date, next_event.brief_time) - datetime.combine(current_event.date, current_event.land_time)
+                total_time_difference += time_difference
+                consecutive_event_count += 1
+
+        # Calculate the average time difference
+        average_time_difference = total_time_difference / consecutive_event_count if consecutive_event_count > 0 else timedelta()
+
+        return average_time_difference
+
+    @property
+    def num_consecutive_events_under_13_hours(self):
+        # Get all events associated with the SNA
+        events = self.ezskedevent_set.exclude(event_type='duty').filter(event_name__in=event_codes_list).order_by('date')
+
+        # Initialize variables
+        total_time_difference = timedelta()
+        count = 0
+
+        # Iterate over each event in the list
+        for i in range(len(events) - 1):
+            current_event = events[i]
+            next_event = events[i + 1]
+
+            # Calculate time difference between current event's land time and next event's brief time
+            time_difference = (datetime.combine(next_event.date, next_event.brief_time) - datetime.combine(current_event.date, current_event.land_time)).total_seconds()
+
+            # Check if time difference is under 13 hours (in seconds)
+            if time_difference < 13 * 3600:  # Convert 13 hours to seconds
+                count += 1
+
+        return count
 
     @property
     def num_weekdays_without_events(self):
