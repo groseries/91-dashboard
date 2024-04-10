@@ -5,8 +5,8 @@ from datetime import datetime, timedelta
 import pytz
 from .scripts import *
 from .models import *
-from django.db.models import Count, IntegerField
-from django.db.models.functions import ExtractWeekDay, ExtractWeek
+from django.db.models import Count, IntegerField, ExpressionWrapper, DateField, DateTimeField
+from django.db.models.functions import ExtractWeekDay, ExtractWeek, ExtractYear, TruncWeek
 from django.db.models import Count, F, Case, When, Value, IntegerField, Sum
 from plotly.subplots import make_subplots
 import plotly.graph_objs as go
@@ -182,19 +182,24 @@ class ClassStats(View):
         # TODO: Most O/Is: check remarks
 
         
-        weekly_events_data = EzSkedEvent.objects.annotate(week=ExtractWeek('date')).values('week').annotate(num_events=Count('id')).order_by('week')
+        weekly_events_data = EzSkedEvent.objects.annotate(
+            week_start_date=TruncWeek('date')
+)           .annotate(
+            week=ExtractWeek('date'),
+            year=ExtractYear('date')).values('year','week','week_start_date').annotate(num_events=Count('id')).order_by('year','week')
 
         # Extract dates and number of events from the data
         
         num_events = [data['num_events'] for data in weekly_events_data]
-        dates = list(range(1, len(num_events) + 1))  # Generate dates for the x-axis using range(1, len(num_events) + 1)
+        week_start_dates = [data['week_start_date'] for data in weekly_events_data]
 
         # Create Plotly figure
         fig = make_subplots(specs=[[{"secondary_y": True}]])
-        fig.add_trace(go.Scatter(x=dates, y=num_events, mode='lines+markers', name='Weekly Events'), secondary_y=False)
+        fig.add_trace(go.Scatter(x=week_start_dates, y=num_events, mode='lines+markers', name='Weekly Events', line=dict(color='rgba(79, 70, 229, 1)')), secondary_y=False)
         fig.update_layout(title='',
-                          xaxis_title='Week',
+                          xaxis_title='Month',
                           yaxis_title='Weekly Total Number of Events',
+                          plot_bgcolor='rgba(255, 238, 214, 1)',
                           font=dict(
                               family= "Inter, sans-serif",
                               size=12,
