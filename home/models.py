@@ -147,6 +147,11 @@ class SNA(models.Model):
     def __str__(self):
         return self.name
 
+# class PotentialCallsign(models.Model):
+#     sna = models.ForeignKey(SNA, on_delete=models.PROTECT, default=None)
+#     callsign = models.CharField(max_length=255, default=None)
+#     comments = models.CharField(max_length=255, default=None, null=True, blank=True)
+
 
 
     

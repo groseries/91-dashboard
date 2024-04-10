@@ -53,29 +53,25 @@
     </div>
 </div>
 
-
+{% include 'plot_card.html' with data=plot_div %}
+</br>
 </br>
 {% for titler, ranking in data %}
 {% include 'ranking_card.html' with title=titler column=titler data=ranking %}
 </br></br>
 {% endfor %}
 
+
+
+
 {% comment %} Every person gets their own card at bottom of page with stats (tbd)
 track their individual metrics ()
 performance data for everyone's takeoff time
 
-early bird award - done
-night owl - done
-Most days completely off
-no rest for the weary - most weekend/friday events
-most unique events (head of the pack) - done
-most repeat events (most times scheduled for same event) - done
-individal cards:
-unofficial onwings - everyones most flown with instructor - done
-duties - done
-early starts - done
-unique events ...
-most recent event ...
-total repeated events ... {% endcomment %}
+Add section for class wide stats
+graph of number of events each week
+running total (or percentage) of events scheduled vs events completed - graph
+average time we were scheduled
+{% endcomment %}
 
 {% endblock content%}

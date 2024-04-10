@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.views import View
 from datetime import datetime, timedelta
@@ -6,9 +6,10 @@ import pytz
 from .scripts import *
 from .models import *
 from django.db.models import Count, IntegerField
-from django.db.models.functions import ExtractWeekDay
+from django.db.models.functions import ExtractWeekDay, ExtractWeek
 from django.db.models import Count, F, Case, When, Value, IntegerField, Sum
-
+from plotly.subplots import make_subplots
+import plotly.graph_objs as go
 
 # Create your views here.
 
@@ -178,8 +179,31 @@ class ClassStats(View):
     template_name = "class_stats_page.html"
 
     def get_context_data(self, request, **kwargs):
-        # TODO: Backseat driver: most trunks; No rest for the weary: shortest turn (average time between events on consecutive weekdays); Most O/Is: check remarks
-        # TODO: add tiles for Head of the flock, backseat driver, no rest for the weary, etc
+        # TODO: Most O/Is: check remarks
+
+        
+        weekly_events_data = EzSkedEvent.objects.annotate(week=ExtractWeek('date')).values('week').annotate(num_events=Count('id')).order_by('week')
+
+        # Extract dates and number of events from the data
+        
+        num_events = [data['num_events'] for data in weekly_events_data]
+        dates = list(range(1, len(num_events) + 1))  # Generate dates for the x-axis using range(1, len(num_events) + 1)
+
+        # Create Plotly figure
+        fig = make_subplots(specs=[[{"secondary_y": True}]])
+        fig.add_trace(go.Scatter(x=dates, y=num_events, mode='lines+markers', name='Weekly Events'), secondary_y=False)
+        fig.update_layout(title='',
+                          xaxis_title='Week',
+                          yaxis_title='Weekly Total Number of Events',
+                          font=dict(
+                              family= "Inter, sans-serif",
+                              size=12,
+                              color="black"
+                          ))
+        
+        # Convert the Plotly figure to HTML
+        plot_div = fig.to_html(full_html=False)
+
 
         # Query all SNAs
         all_snas = SNA.objects.all()
@@ -223,6 +247,7 @@ class ClassStats(View):
 
       
         context = {
+                "plot_div": plot_div,
                 "head_of_flock":snas_with_latest_scheduled_event[0],
                 "early_bird":early_events_ranking_with_count[0],
                 "night_owl":late_events_ranking_with_count[0],
