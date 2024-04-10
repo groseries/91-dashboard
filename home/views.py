@@ -197,14 +197,31 @@ class ClassStats(View):
         fig = make_subplots(specs=[[{"secondary_y": True}]])
         fig.add_trace(go.Scatter(x=week_start_dates, y=num_events, mode='lines+markers', name='Weekly Events', line=dict(color='rgba(79, 70, 229, 1)')), secondary_y=False)
         fig.update_layout(title='',
-                          xaxis_title='Month',
-                          yaxis_title='Weekly Total Number of Events',
-                          plot_bgcolor='rgba(255, 238, 214, 1)',
-                          font=dict(
-                              family= "Inter, sans-serif",
-                              size=12,
-                              color="black"
-                          ))
+                            autosize=True,  # Automatically adjust size to fill container
+
+                            xaxis_title='Month',
+                            yaxis_title='Weekly Total Number of Events',
+                            yaxis=dict(
+                                    showgrid=False,
+                                    zeroline=False   # Set showgrid to False to remove horizontal gridlines
+                                ),
+                            xaxis=dict(
+                                showgrid=True,
+                                gridcolor='rgba(240, 188, 116, 1)',  # Color of gridlines
+                                gridwidth=1,  # Width of gridlines
+                                griddash='dash',  # Set gridlines to dashed
+                                zeroline=False  # Remove zero line
+
+                            ),
+                            plot_bgcolor='rgba(255, 238, 214, 1)',
+                            paper_bgcolor='rgba(255, 238, 214, 1)',
+                            font=dict(
+                            family= "Inter, sans-serif",
+                            size=12,
+                            color="black",
+                            
+
+                            ))
         
         # Convert the Plotly figure to HTML
         plot_div = fig.to_html(full_html=False)
